@@ -1,4 +1,4 @@
-uuid: b147d36c-a20d-4eda-bc67-3f77c66c6a40
+uuid: 73b1d1ce-14fe-4ae6-8f05-a8ded28c73a1
 name: pbl-drupal
 mail: admin@example.com
 slogan: ''
@@ -12,4 +12,3 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
-mail_notification: ''
