@@ -1,0 +1,66 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.breadcrumb {
+  display: none;
+  visibility: hidden;
+  @include adjust-font-size-to(15px);
+  position: relative;
+  z-index: 20;
+  margin: rhythm(1) 0 0;
+  
+  @include breakpoint($bp3) {
+    display: block;
+    visibility: visible;
+    margin: rhythm(1) 0 rhythm(-2);
+  }
+
+  // Reset ol styles
+  ol {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  // Display list items inline
+  li {
+    display: inline-block;
+    color: $blue-gray;
+    margin: 0;
+    padding: 0;
+    
+    a:link,
+    a:visited {
+      display: inline-block;
+      color: $blue-gray;
+      text-decoration: none;
+    }
+    
+    a:active,
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    // Add slash between list items
+    &:before {
+      content: "";
+      background: url("../imgs/production/breadcrumb-arrow-01.png");
+      background-size: contain;
+      display: inline-block;
+      height: 16px;
+      width: 12px;
+      color: $blue-gray;
+      border-radius: 0;
+      margin: 0 rhythm(.35) 0 rhythm(.2);
+      position: relative;
+      top: 3px;
+      left: auto;
+      padding: 0;
+    }
+
+    // Remove slash for first list item
+    &:first-child:before {
+      content: none;
+      margin: 0;
+    }
+  }
+}

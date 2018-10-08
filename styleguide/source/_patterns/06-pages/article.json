@@ -1,0 +1,47 @@
+{
+  "article": {
+    "hero": {
+      "size": "small",
+      "title": "Getting Started",
+      "desc": null,
+      "cta": {
+        "title": null,
+        "url": null
+      },
+      "featured_img": {
+        "src": "/assets/imgs/production/hero-image--small.png",
+        "alt": "Placeholder alt text"
+      } 
+    },
+    "grandparent": "Get Started",
+    "parent": "Browse Get Started",
+    "name": "Setup Your Environment",
+    "active": "Get Started with Akamai APIs",
+    "eyebrow": "Akamai APIs",
+    "title": "Setup your Environment",
+    "railNav": true,
+    "authors": ["John Smith"]
+  },
+  "breadcrumbs": [
+    {
+      "link": "#",
+      "label": "Home"
+    },
+    {
+      "link": "#",
+      "label": "Get Started"
+    },
+    {
+      "link": null,
+      "label": "Browse Get Started"
+    },
+    {
+      "link": "#",
+      "label": "Akamai APIs"
+    },
+    {
+      "link": "#",
+      "label": "Setup Your Environment"
+    }
+  ]
+}

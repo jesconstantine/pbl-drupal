@@ -1,0 +1,18 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.eyebrow {
+  font-weight: 500;
+  
+  &:before {
+    content: '<';
+    display: inline;
+  }
+  
+  &:after {
+    content: '/>';
+    display: inline;
+    margin-left: 1px;
+  }
+}
+
+

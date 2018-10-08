@@ -1,0 +1,14 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+{% extends '_code-snippet.twig' %}
+
+{% block codeSnippet %}
+
+  if (!open(FOO)) { die "Can't open $FOO: $!" }
+  die "Can't open $FOO: $!" unless open(FOO);
+  open(FOO)  || die "Can't open $FOO: $!";
+  open(FOO) ? () : die "Can't open $FOO: $!";
+      # a bit exotic, that last one
+
+{% endblock %}
+

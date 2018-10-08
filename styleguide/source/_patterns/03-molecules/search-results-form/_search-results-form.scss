@@ -1,0 +1,44 @@
+// @copyright Copyright (c) 2018 Palantir.net
+.search-results-title {
+  @include adjust-font-size-to($sm-heading, 1.25);
+  color: $blue-gray;
+  
+  svg {
+    height: 16px;
+    width: 16px;
+    fill: $blue-gray;
+    margin-right: rhythm(.15);
+  }
+}
+
+.search-results-form {
+  margin: rhythm(3) 0 rhythm(1);
+  
+  input[type='search'] {
+    @include adjust-font-size-to($sm-heading, 1.25);
+    background-color: $white;
+    box-shadow: 0 0 15px rgba($black, .15); 
+    padding: rhythm(.5) rhythm(.25);
+    border: 1px solid $gray-lt;
+    
+    @include breakpoint($bp2) {
+      display: inline-block;
+      float: left;
+      width: 71%;
+      width: calc(100% - 140px);
+    }
+    
+    @include breakpoint($bp3) {
+      max-width: 700px;
+    }
+  }
+  
+  button[type="submit"]{
+    
+    @include breakpoint($bp2) {
+      margin-left: rhythm(1);
+      position: relative;
+      top: 6px;
+    }
+  }
+}

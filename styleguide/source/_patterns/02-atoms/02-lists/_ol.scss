@@ -1,0 +1,40 @@
+ol {
+  counter-reset:li; /* Initiate a counter */
+  margin-left: 0; 
+  padding-left: 0; 
+
+  > li {
+    position: relative; /* Create a positioning context */
+    margin:0 0 20px 2.25em; 
+    padding:5px 8px; 
+    list-style:none; 
+    font-weight: 400;
+    
+    &:before {
+      content: counter(li); /* Use the counter as content */
+      counter-increment: li; /* Increment the counter by 1 */
+      /* Position and style the number */
+      position: absolute;
+      top: -2px;
+      left: -2em;
+      width: 2em;
+      height: 2em;
+      border-radius: 1em;
+      margin-right: 8px;
+      padding: 7px 2px 6px;
+      color: #fff;
+      background: $blue-gray;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+}
+
+.list--orange {
+  > li {
+    
+    &:before {
+      background: $orange;
+    }
+  }
+}

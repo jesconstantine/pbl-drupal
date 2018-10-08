@@ -1,0 +1,31 @@
+// @copyright Copyright (c) 2018 Palantir.net
+.page {
+  margin: rhythm(1) 0;
+  
+  @include breakpoint($bp3) {
+    margin: rhythm(3) 0;
+  }
+}
+
+.page__body {
+  margin: 0 0 rhythm(1);
+  
+  @include breakpoint($bp3) {
+    margin: 0 0 rhythm(2);
+  }
+}
+
+.page__header {
+  margin-top: rhythm(.25);
+  margin-bottom: rhythm(.25);
+  font-weight: 500;
+}
+
+.page__meta {
+  margin-bottom: rhythm(1);
+}
+
+.page__image {
+  display: block;
+  margin-bottom: rhythm(2);
+}

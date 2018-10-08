@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "name": "$blue-lt",
+      "value": "#53b1e0"
+    },
+    {
+      "name": "$blue",
+      "value": "#3399CC"
+    },
+    {
+      "name": "$orange",
+      "value": "#FF9934"
+    },
+    {
+      "name": "$blue-gray",
+      "value": "#596773"
+    },
+    {
+      "name": "$blue-gray-dk",
+      "value": "#042B4C"
+    },
+    {
+      "name": "$gray-dk",
+      "value": "#333333"
+    },
+    {
+      "name": "$gray-lt",
+      "value": "#F0F1F2"
+    },
+    {
+      "name": "$white",
+      "value": "#ffffff"
+    },
+    {
+      "name": "$gold",
+      "value": "#FDBC51"
+    },
+    {
+      "name": "$pink",
+      "value": "#E15EA3"
+    },
+    {
+      "name": "$red",
+      "value": "#EE695C"
+    },
+    {
+      "name": "$lilac",
+      "value": "#9888C0"
+    },
+    {
+      "name": "$aqua",
+      "value": "#43BEAC"
+    },
+    {
+      "name": "$green",
+      "value": "#CDDA29"
+    }
+  ]
+}

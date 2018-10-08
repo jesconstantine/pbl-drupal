@@ -1,0 +1,491 @@
+{
+  "key": "value",
+  "key2": "use this for variables you want to load globally",
+  "title": "Developers.Akamai.com Styleguide",
+  "page_items" : [
+    {
+      "label" : "On this Page",
+      "child_groups" : [
+        {
+          "label" : "Overview",
+          "url" : "#overview"
+        },
+        {
+          "label" : "Documentation",
+          "url" : "#documentation"
+        },
+        {
+          "label" : "Code Samples",
+          "url" : "#codesamples"
+        },
+        {
+          "label" : "Videos",
+          "url" : "#videos"
+        },
+        {
+          "label" : "Tutorials",
+          "url" : "#tutorials"
+        },
+        {
+          "label" : "Quick start guides",
+          "url" : "#quickstartguides"
+        },
+        {
+          "label" : "Workbooks",
+          "url" : "#workbooks"
+        }
+      ]
+    }
+  ],
+  "menu_items": [
+    {
+      "label": "Solutions",
+      "child_groups": [
+        {
+          "label": "Browse by Category",
+          "items": [
+            {
+              "label": "Web Performance",
+              "items": [
+                {
+                  "label": "Overview",
+                  "url": "#" 
+                },
+                {
+                  "label": "Getting Started",
+                  "url": "#",
+                  "items": [
+                    {
+                      "label": "Navigation l5 that is really long",
+                      "url": "#" 
+                    },
+                    {
+                      "label": "Navigation l5",
+                      "url": "#" 
+                    }
+                  ] 
+                },
+                {
+                  "label": "Documentation",
+                  "url": "#" 
+                },
+                {
+                  "label": "Tools & SDKs",
+                  "url": "#" 
+                },
+                {
+                  "label": "Resources",
+                  "url": "#" 
+                },
+                {
+                  "label": "Support",
+                  "url": "#" 
+                }
+              ]
+            },
+            {
+              "label": "Media Delivery",
+              "url": "#",
+              "items": [
+                {
+                  "label": "Overview",
+                  "url": "#" 
+                },
+                {
+                  "label": "Getting Started",
+                  "url": "#" 
+                },
+                {
+                  "label": "Documentation",
+                  "url": "#" 
+                },
+                {
+                  "label": "Tools & SDKs",
+                  "url": "#" 
+                },
+                {
+                  "label": "Resources",
+                  "url": "#" 
+                },
+                {
+                  "label": "Support",
+                  "url": "#" 
+                }
+              ] 
+            },
+            {
+              "label": "Cloud Security",
+              "url": "#",
+              "items": [
+                {
+                  "label": "Overview",
+                  "url": "#" 
+                },
+                {
+                  "label": "Getting Started",
+                  "url": "#" 
+                },
+                {
+                  "label": "Documentation",
+                  "url": "#" 
+                },
+                {
+                  "label": "Tools & SDKs",
+                  "url": "#" 
+                },
+                {
+                  "label": "Resources",
+                  "url": "#" 
+                },
+                {
+                  "label": "Support",
+                  "url": "#" 
+                }
+              ] 
+            } 
+          ]
+        },
+        {
+          "label": "Browse by Topic",
+          "url": "#",
+          "items": [
+            {
+              "label": "Akamai Intelligent Platform",
+              "url": "#" 
+            },
+            {
+              "label": "Akamai for Devops",
+              "url": "#" 
+            },
+            {
+              "label": "Akamai CLI",
+              "url": "#" 
+            },
+            {
+              "label": "Akamai Cloudlets",
+              "url": "#" 
+            },
+            {
+              "label": "Content Delivery",
+              "url": "#" 
+            },
+            {
+              "label": "Mobile",
+              "url": "#" 
+            },
+            {
+              "label": "Content Delivery",
+              "url": "#" 
+            },
+            {
+              "label": "Content Management",
+              "url": "#" 
+            },
+            {
+              "label": "Core Features",
+              "url": "#" 
+            },
+            {
+              "label": "DevOps",
+              "url": "#" 
+            },
+            {
+              "label": "Monitoring",
+              "url": "#" 
+            },
+            {
+              "label": "Networking",
+              "url": "#" 
+            },
+            {
+              "label": "OPEN Akamai",
+              "url": "#" 
+            },
+            {
+              "label": "Security",
+              "url": "#" 
+            },
+            {
+              "label": "Storage",
+              "url": "#" 
+            },
+            {
+              "label": "Testing",
+              "url": "#" 
+            },
+            {
+              "label": "mPulse",
+              "url": "#" 
+            },
+            {
+              "label": "Network Security",
+              "url": "#" 
+            },
+            {
+              "label": "OTA Updates",
+              "url": "#" 
+            },
+            {
+              "label": "Purge",
+              "url": "#" 
+            },
+            {
+              "label": "Security",
+              "url": "#" 
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Get Started",
+      "child_groups": [
+        {
+          "label": "Browse Get Started",
+          "items": [
+            {
+              "label": "Get Started with Akamai",
+              "url": "#",
+              "items": [
+                {
+                  "label": "Setup Your Environment",
+                  "url": "#" 
+                },
+                {
+                  "label": "Authorize your Client",
+                  "url": "#" 
+                },
+                {
+                  "label": "Configure your Credentials",
+                  "url": "#" 
+                },
+                {
+                  "label": "Make your First API Call",
+                  "url": "#" 
+                }
+              ]  
+            },
+            {
+              "label": "Get Started with Akamai APIs",
+              "url": "#",
+              "items": [
+                {
+                  "label": "Setup Your Environment",
+                  "url": "#" 
+                },
+                {
+                  "label": "Authorize your Client",
+                  "url": "#" 
+                },
+                {
+                  "label": "Configure your Credentials",
+                  "url": "#" 
+                },
+                {
+                  "label": "Make your First API Call",
+                  "url": "#" 
+                }
+              ]
+            },
+            {
+              "label": "Get Started with Akamai CLI",
+              "url": "#",
+              "items": [
+                {
+                  "label": "Setup Your Environment",
+                  "url": "#" 
+                },
+                {
+                  "label": "Authorize your Client",
+                  "url": "#" 
+                },
+                {
+                  "label": "Configure your Credentials",
+                  "url": "#" 
+                },
+                {
+                  "label": "Make your First API Call",
+                  "url": "#" 
+                }
+              ] 
+            },
+            {
+              "label": "Get Started with Akamai's MAP SDK",
+              "url": "#",
+              "items": [
+                {
+                  "label": "Setup Your Environment",
+                  "url": "#" 
+                },
+                {
+                  "label": "Authorize your Client",
+                  "url": "#" 
+                },
+                {
+                  "label": "Configure your Credentials",
+                  "url": "#" 
+                },
+                {
+                  "label": "Make your First API Call",
+                  "url": "#" 
+                }
+              ] 
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Documentation",
+      "url": "#"
+    },
+    {
+      "label": "Tools",
+      "child_groups": [
+        {
+          "label": "Browse Tools",
+          "items": [
+            {
+              "label": "Tool 1",
+              "url": "#" 
+            },
+            {
+              "label": "Tool 2",
+              "url": "#" 
+            },
+            {
+              "label": "Tool 3",
+              "url": "#" 
+            },
+            {
+              "label": "Tool 4",
+              "url": "#" 
+            }
+          ]
+        },
+        {
+          "label": "Browse SDKs",
+          "url": "#",
+          "items": [
+            {
+              "label": "SDK 1",
+              "url": "#" 
+            },
+            {
+              "label": "SDK 2",
+              "url": "#" 
+            },
+            {
+              "label": "SDK 3",
+              "url": "#" 
+            },
+            {
+              "label": "SDK 4",
+              "url": "#" 
+            }
+          ]
+        },
+        {
+          "label": "Browse Integrations",
+          "url": "#",
+          "items": [
+            {
+              "label": "Integration 1",
+              "url": "#" 
+            },
+            {
+              "label": "Integration 2",
+              "url": "#" 
+            },
+            {
+              "label": "Integration 3",
+              "url": "#" 
+            },
+            {
+              "label": "Integration 4",
+              "url": "#" 
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Blog",
+      "url": "#"
+    },
+    {
+      "label": "Forums",
+      "url": "#"
+    },
+    {
+      "label": "Register",
+      "url": "#"
+    }
+  ],
+  "footer_items": [
+    {
+      "label": "Company",
+      "child_group": [
+        {
+          "label": "About Akamai",
+          "url": "#"
+        },
+        {
+          "label": "Akamai Developer Program",
+          "url": "#"
+        },
+        {
+          "label": "Akamai Admin Program",
+          "url": "#"
+        },
+        {
+          "label": "Akamai MVP Program",
+          "url": "#"
+        },
+        {
+          "label": "Support",
+          "url": "#"
+        },
+        {
+          "label": "Contact Us",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "label": "Developer",
+      "child_group": [
+        {
+          "label": "Get Started",
+          "url": "#"
+        },
+        {
+          "label": "Documentation",
+          "url": "#"
+        },
+        {
+          "label": "Tools & SDKs",
+          "url": "#"
+        },
+        {
+          "label": "Resource Center",
+          "url": "#"
+        },
+        {
+          "label": "Events & Community",
+          "url": "#"
+        },
+        {
+          "label": "Blog",
+          "url": "#"
+        }
+      ]
+    }
+  ],
+  "footerCTA": {
+    "label": "Join the Akamai Developer Program",
+    "type": "secondary",
+    "url" : "#"
+  }
+}
+

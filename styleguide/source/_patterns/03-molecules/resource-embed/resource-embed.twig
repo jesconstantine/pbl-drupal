@@ -1,0 +1,73 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<article data-modal="" class="card resource-card">
+    
+  {% if (resource.type == 'image') or (resource.type == 'imageGallery') or (resource.type == 'video') %}
+    <button data-modal="#{{resource.id}}" class="card__link resource-modal-trigger" aria-controls="#{{resource.id}}">
+  {% else %}
+    <a class="card__link" href="{{resource.url}}">
+  {% endif %}
+    
+    {% if resource.img.src %}
+    <div class="card__image" style="background-image: url('{{resource.img.src}}');"></div>
+    {% endif %}
+    
+    <div class="card__content">
+      {% set eyebrow = 'resources' %}
+      {% include "eyebrow.twig" %}
+      
+      <h3 class="card__title">{{resource.title}}</h3>
+      
+      {% if resource.desc %}        
+      <div class="card__desc">
+        {{resource.desc}}
+      </div>
+      {% endif %}
+      
+      {% if resource.cta %}
+        <span class="button button--small button--secondary">{{resource.cta}}</span>
+      {% endif %}
+    </div>
+    
+  {% if (resource.type == 'image') or (resource.type == 'imageGallery') or (resource.type == 'video') %}
+  </button>
+  {% else %}
+  </a>
+  {% endif %}
+  {% if (resource.type == 'image') or (resource.type == 'imageGallery') or (resource.type == 'video') %}
+  <div id="{{resource.id}}" class="resource-modal">
+    
+    <div class="resource-modal-container {% if resource.type == 'video' %}has-video{% endif %}">
+    {% if resource.type == 'image' %}
+      {% for media in resource.media %}
+      <img src="{{media.src}}" alt="{{media.alt}}" />
+      {% endfor %}
+    {% endif %}
+    
+    {% if resource.type == 'imageGallery' %}
+      <div class="resource-gallery">
+        {% for media in resource.media %}
+        <div class="resource-gallery__slide">
+          <img src="{{media.src}}" alt="{{media.alt}}" />
+        </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    
+    {% if resource.type == 'video' %}
+      {% for media in resource.media %}
+        <figure class="resource-video">
+          <div class="inline-video-container">
+            <iframe src="{{ media.src }}" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </figure>
+      {% endfor %}
+    {% endif %}
+    
+      <button class="resource-modal-close" title="Close the Modal" type="button">Close</button>
+    </div>
+    
+    
+  </div>
+  {% endif %}
+</article>
+

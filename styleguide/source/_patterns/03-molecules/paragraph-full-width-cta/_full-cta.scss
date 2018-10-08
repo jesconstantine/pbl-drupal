@@ -1,0 +1,19 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.full-cta {
+  clear: both;
+  padding: rhythm(.5) 0;
+}
+
+.full-cta h2 {
+  margin-top: rhythm(.2);
+  margin-bottom: rhythm(.2);
+  
+  .page-section--dark & {
+    color: $white;
+  }
+}
+
+.page-section--dark .full-cta {
+  color: $white;
+}

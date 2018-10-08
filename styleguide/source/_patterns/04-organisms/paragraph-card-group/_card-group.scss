@@ -1,0 +1,74 @@
+// @copyright Copyright (c) 2018 Palantir.net
+.card-group {
+  clear: both;
+  
+  .card {
+    @include breakpoint($bp3) {
+      // margin: rhythm(1) rhythm(.5);
+      
+      &:nth-child(1):nth-last-child(1) {
+        margin: rhythm(1) 0;
+      }
+      
+      // 2-up layout
+      // when there are two items it's 50:50
+      &:nth-child(1):nth-last-child(2) {
+        margin: rhythm(1) rhythm(.5) rhythm(1) 0;
+      }
+
+      &:nth-child(2):nth-last-child(1) {
+        margin: rhythm(1) 0 rhythm(1) rhythm(.5);
+      }
+
+      // 3-up layout
+      // when there are three items it's 33:33:33
+      &:nth-child(1):nth-last-child(3) {
+        margin: rhythm(1) rhythm(.5) rhythm(1) 0;
+      }
+
+      &:nth-child(2):nth-last-child(2) {
+        margin: rhythm(1) rhythm(.25);
+      }
+
+      &:nth-child(3):nth-last-child(1) {
+        margin: rhythm(1) 0 rhythm(1) rhythm(.5);
+      }
+    }
+
+    @include breakpoint($bp5) {
+      &:nth-child(1):nth-last-child(1) {
+        margin: rhythm(1) 0;
+      }
+      
+      // 2-up layout
+      // when there are two items it's 50:50
+      &:nth-child(1):nth-last-child(2) {
+        margin: rhythm(1) rhythm(1) rhythm(1) 0;
+      }
+
+      &:nth-child(2):nth-last-child(1) {
+        margin: rhythm(1) 0 rhythm(1) rhythm(1);
+      }
+
+      // 3-up layout
+      // when there are three items it's 33:33:33
+      &:nth-child(1):nth-last-child(3) {
+        margin: rhythm(1) rhythm(1) rhythm(1) 0;
+      }
+
+      &:nth-child(2):nth-last-child(2) {
+        margin: rhythm(1) rhythm(.5);
+      }
+
+      &:nth-child(3):nth-last-child(1) {
+        margin: rhythm(1) 0 rhythm(1) rhythm(1);
+      }
+    }
+  }
+  
+  @include breakpoint($bp4) {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  } 
+}

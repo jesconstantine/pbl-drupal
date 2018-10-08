@@ -1,0 +1,78 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+{% extends '@templates/blog-detail.twig' %}
+
+{% block blogBody %}
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed sagittis nisl. Pellentesque lorem mauris, lacinia et congue ut, dictum eu lacus. Pellentesque commodo tellus non convallis tincidunt. Fusce tempor nisl quis augue facilisis maximus. Mauris congue sollicitudin pharetra. Aenean blandit ante ultricies, condimentum felis in, tempus erat. Aenean faucibus, nisl ac egestas tincidunt, felis libero pharetra felis, vel convallis urna magna eget nisi. Proin viverra elit et consectetur pellentesque. Cras molestie eros ut vestibulum eleifend.</p>
+
+<h2>Section 1</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<ol>
+  <li>Review the OPEN API Introduction on tools that Akamai provides.</li>
+  <li>Review the OPEN API Provisioning to create your OPEN API access credentials and authorizations. As detailed in API Identity Model, you then access the API using custom hostnames that look like this: XXXXXXX</li>
+  <li>Review the OPEN API Provisioning to create your OPEN API access credentials and authorizations. As detailed in API Identity Model, you then access the API using custom hostnames that look like this: XXXXXXX</li>
+</ol>
+<h3>Lorem Ipsum Dolor Set</h3>
+<p>Vivamus congue eros pretium, scelerisque sem vitae, condimentum dui. Mauris bibendum sit amet mauris at scelerisque. Phasellus malesuada semper diam non consectetur. Mauris dictum, lorem et vulputate rutrum, ex lectus dignissim erat, at finibus felis metus quis ligula.</p>
+<pre class="code-snippet">
+  <code class="language-csharp">
+using System;
+
+namespace RectangleApplication {
+   class Rectangle {
+      
+      // member variables
+      double length;
+      double width;
+      
+      public void Acceptdetails() {
+         length = 4.5;    
+         width = 3.5;
+      }
+      public double GetArea() {
+         return length * width; 
+      }
+      public void Display() {
+         Console.WriteLine("Length: {0}", length);
+         Console.WriteLine("Width: {0}", width);
+         Console.WriteLine("Area: {0}", GetArea());
+      }
+   }
+   class ExecuteRectangle {
+      static void Main(string[] args) {
+         Rectangle r = new Rectangle();
+         r.Acceptdetails();
+         r.Display();
+         Console.ReadLine(); 
+      }
+   }
+}
+  </code>
+</pre>
+<p>Figure 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisl lacus, fermentum ac dignissim et, porttitor sed quam. Cras pharetra gravida purus, in aliquam ligula.</p>
+
+<h2>Section 2</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+{% include "inline-video.twig" with { "video_url": "https://www.youtube.com/embed/QAd9mp7ISCg", "title": "My Video Title" } %}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+{% include "inline-image.twig" with { "src": "https://placeimg.com/900/600/any", "alt": "Alternative Text", "caption": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.", "orientation": "left"} %}
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h2>Section 3</h2>
+{% include "inline-blockquote.twig" with { "quote" : "Fusce consequat imperdiet ipsum id sollicitudin. Nulla elit orci, eleifend sed magna eget, rutrum tincidunt erat. Quisque nec diam vitae urna interdum lacinia.", "cite" : "Jane Doe", "orientation" : "right" } %}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{% include "inline-blockquote.twig" with { "quote" : "Fusce consequat imperdiet ipsum id sollicitudin. Nulla elit orci, eleifend sed magna eget, rutrum tincidunt erat. Quisque nec diam vitae urna interdum lacinia.", "cite" : "Jane Doe", "orientation" : "full" } %}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{% include "inline-blockquote.twig" with { "quote" : "Fusce consequat imperdiet ipsum id sollicitudin. Nulla elit orci, eleifend sed magna eget, rutrum tincidunt erat. Quisque nec diam vitae urna interdum lacinia.", "cite" : "Jane Doe" } %}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+{% endblock %}

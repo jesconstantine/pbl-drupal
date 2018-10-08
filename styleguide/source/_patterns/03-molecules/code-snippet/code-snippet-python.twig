@@ -1,0 +1,23 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+{% extends '_code-snippet.twig' %}
+
+{% block codeSnippet %}
+
+ parser = argparse.ArgumentParser(description='Automatically clone Akamai configurations.')
+ parser.add_argument('--listinfo', help='Prints all Group and Property info if set.',action='store_true',default='False')
+ parser.add_argument('--property', help='Property ID to clone from',required=False)
+ parser.add_argument('--newgroup', help='New groupID to creat property in',required=False)
+ parser.add_argument('--suffix', help='Akamai suffix to use (Example: akamaihd.net)',required=False)
+ parser.add_argument('--email', help='Email address to receive activation notifications to. use --email multiple time for multiple addresses',required=False,action='append')
+ parser.add_argument('--secure', help='true or false, whether to use HTTPS',required=False)
+ parser.add_argument('--name', help='Property name to use for new property (Example: test.nhl.com)',required=False)
+ parser.add_argument('--live', help='0 for Live; 1 for OnDemand (HTTP Downloads Only)',required=False)
+ parser.add_argument('--segdur', help='Number of seconds for segments (Example: 6) (HTTP Downloads Only)',required=False)
+ parser.add_argument('--useauth', help='0 to diable authentication; 1 to enable tokenization (HTTP Downloads Only)',required=False)
+ parser.add_argument('--origin', help='Hostname of Origin server',required=False)
+ parser.add_argument('--nscp', help='CPCode for Netstorage when using Netstorage as Origin server',required=False)
+ parser.add_argument('--cpcode', help='Optional: Override CP Code with pre-created one',required=False,default='auto')
+
+{% endblock %}
+

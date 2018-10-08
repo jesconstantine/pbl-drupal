@@ -1,0 +1,41 @@
+<div class='img-w-text {% if imgText.alignment == 'right' %} img-w-text--right{% endif %} {% if imgText.clip == true %} img-w-text--clip{% endif %}'>
+  <div class="row justify-content-between">
+    {# image is only optional for use in tabs #}
+    {% if imgText.img.src %}
+    <div class="img-col-img">
+      {# If there is only one CTA, the image should be a link, else it shouldn't be a link. #}
+      {% if (imgText.cta1.url == true) and (imgText.cta2.url == null) and (imgText.cta3.url == null) %}<a href="{{imgText.cta1.url}}">{% endif %}
+      <img class="img-w-text__image" src="{{ imgText.img.src }}" alt="{{ imgText.img.alt }}" />
+      {% if (imgText.cta1.url == true) and (imgText.cta2.url == null) and (imgText.cta3.url == null) %}</a>{% endif %}
+    </div>
+    {% endif %}
+    <div class="img-col-text">
+      {% if imgText.eyebrow %}
+      {% set eyebrow = imgText.eyebrow %}
+      {% include "eyebrow.twig" %}
+      {% endif %}
+      {% set text = imgText.title %}
+      {% include "h3.twig" %}
+      {% if imgText.desc %}
+      <div class="paragraph-desc inline">
+        {{imgText.desc}}
+      </div>
+      {% endif %}
+      {% if imgText.cta1.title %}
+        {% set url = imgText.cta1.url %}
+        {% set label = imgText.cta1.title %}
+        {% include "inline-button-link.twig" %}
+      {% endif %}
+      {% if imgText.cta2.title %}
+        {% set url = imgText.cta2.url %}
+        {% set label = imgText.cta2.title %}
+        {% include "inline-button-link.twig" with {"type": "secondary"} %}
+      {% endif %}
+      {% if imgText.cta3.title %}
+        {% set url = imgText.cta3.url %}
+        {% set label = imgText.cta3.title %}
+        {% include "inline-button-link.twig" with {"type": "tertiary"} %}
+      {% endif %}
+    </div>
+  </div>
+</div>

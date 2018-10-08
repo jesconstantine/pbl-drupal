@@ -1,0 +1,18 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<dl>
+  {% for item in items %}
+    {% if item.terms %}
+      {% for term in item.terms %}
+        {% set text = term %}
+        {% include "dt.twig" %}
+      {% endfor %}
+    {% endif %}
+    {% if item.descriptions %}
+      {% for description in item.descriptions %}
+        {% set text = description %}
+        {% include "dd.twig" %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</dl>

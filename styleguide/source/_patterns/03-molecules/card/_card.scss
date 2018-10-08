@@ -1,0 +1,282 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.card {
+  flex: 0 1 100%;
+  margin: rhythm(1) 0;
+  min-width: 0;
+
+  .button {
+    display: inline-block;
+    margin-top: rhythm(1.5);
+  }
+
+  @include breakpoint($bp3) {
+    margin: rhythm(1) 0;
+    position: relative;
+    
+    .button {
+      position: absolute;
+      bottom: rhythm(2.5);
+      margin-top: 0;
+    }
+    
+    .button--tertiary {
+      bottom: rhythm(3.25);
+    }
+  }
+}
+
+.card__secondary-img {
+  display: block;
+  clear: both;
+  margin-bottom: rhythm(0.75);
+}
+
+.card__secondary-img--bottom {
+  display: block;
+  clear: both;
+  margin-top: rhythm(0.75);
+}
+
+.card--resource {
+  button.card__link {
+    @include adjust-font-size-to($text, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+    color: $blue-gray;
+    
+    &.card--border-top {
+      border-top: 8px solid $blue-gray-dk;
+    }
+    
+    &.card--border-bottom {
+      border-bottom: 8px solid $blue-gray-dk;
+    }
+  }
+  
+  &.card--reversed button.card__link {
+    color: $white;
+      
+    .button--secondary {
+      color: $white;
+      border-color: $white;
+    }
+    
+    .button--tertiary {
+      color: $white;
+      
+      &::after {
+        background-image: url('../imgs/production/chevron-small-right-white.svg');
+      }
+    }
+    
+    &:active,
+    &:hover,
+    &:focus {
+      .button--secondary {
+        background-color: $white;
+        border-color: $white;
+        color: $blue-gray;
+      }
+    }
+  }
+}
+
+.card__no-link {
+  display: block;
+  background-color: $white;
+  box-shadow: 0 0 25px rgba($black, .1);
+  height: 100%;
+  
+  .card--reversed & {
+    color: $white;
+  }
+  
+  &.card--border-top {
+    border-top: 8px solid $blue-gray-dk;
+  }
+  
+  &.card--border-bottom {
+    border-bottom: 8px solid $blue-gray-dk;
+  }
+}
+
+.card__link {
+  display: block;
+  background-color: $white;
+  box-shadow: 0 0 25px rgba($black, .1);
+  height: 100%;
+  transform: perspective(100px) translateZ(0px);
+  
+  &.card--border-top {
+    border-top: 8px solid $blue-gray-dk;
+  }
+  
+  &.card--border-bottom {
+    border-bottom: 8px solid $blue-gray-dk;
+  }
+
+  &:link,
+  &:visited {
+    transform: perspective(100px) translateZ(0px);
+    text-decoration: none;
+    color: $blue-gray;
+    
+    .card--reversed & {
+      color: $white;
+      
+      .button--secondary {
+        color: $white;
+        border-color: $white;
+      }
+      
+      .button--tertiary {
+        color: $white;
+        
+        &::after {
+          background-image: url('../imgs/production/chevron-small-right-white.svg');
+        }
+      }
+    }
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    transform: perspective(100px) translateZ(2px);
+    text-decoration: none;
+    box-shadow: 0 0 25px rgba($black, .25);
+    
+    .button--tertiary {
+      text-decoration: underline;
+    }
+
+    .button--secondary {
+      background-color: $blue-gray;
+      border-color: $blue-gray;
+      color: $white;
+      
+      .card--reversed & {
+        background-color: $white;
+        border-color: $white;
+        color: $blue-gray;
+      }
+    }
+  }
+}
+
+.card__image {
+  @extend %clearfix;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin-bottom: rhythm(.5);
+  height: 150px;
+  min-height: 150px;
+  
+  &.card__image--svg {
+    background-size: 100%;
+    background-position: top center;
+  }
+
+  @include breakpoint($bp3) {
+    height: 200px;
+    min-height: 200px;
+    margin-bottom: 0;
+  }
+
+  @include breakpoint($bp5) {
+    height: 250px;
+    min-height: 250px;
+  }
+}
+
+.card__content {
+  padding: rhythm(2) rhythm(1.5) rhythm(2.5);
+  
+  .card__no-link &,
+  .card__link--no-cta & {
+    padding-bottom: rhythm(2.5);
+  }
+  
+  @include breakpoint($bp2) {
+    padding: rhythm(2) rhythm(2.5) rhythm(2.5);
+    
+    .card__no-link &,
+    .card__link--no-cta & {
+      padding-bottom: rhythm(2.5);
+    }
+  }
+  
+  @include breakpoint($bp3) {
+    padding: rhythm(2) rhythm(2.5) rhythm(4.5);
+    
+    .card__no-link &,
+    .card__link--no-cta & {
+      padding-bottom: rhythm(2.5);
+    }
+  }
+  
+  @include breakpoint($bp3 1336px) {
+    .landing--w-rail & {
+      padding: rhythm(1.25) rhythm(1.25) rhythm(4.5);
+    }
+    
+    .landing--w-rail .card__no-link &,
+    .landing--w-rail .card__link--no-cta & {
+      padding-bottom: rhythm(2);
+    }
+  }
+  
+  @include breakpoint($bp4) {
+    padding: rhythm(2) rhythm(2) rhythm(4.5);
+    
+    .card__no-link &,
+    .card__link--no-cta & {
+      padding-bottom: rhythm(2.5);
+    }
+  }
+}
+
+.card__title {
+  margin-top: rhythm(.15);
+  margin-bottom: rhythm(.25);
+  
+  .card--reversed & {
+    color: $white;
+  }
+}
+
+.card__meta {
+  margin-bottom: rhythm(.65);
+}
+
+.card__desc {
+  .card--reversed & {
+    a:link,
+    a:visited {
+      color: $white;
+      text-decoration: underline;
+    }
+    
+    a:active,
+    a:hover,
+    a:focus {
+      color: $white;
+      text-decoration: underline;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: $white;
+    }
+  }
+}

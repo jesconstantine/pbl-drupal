@@ -1,0 +1,11 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+{% if type == 'secondary' %}
+  {% set class = 'button--secondary button--small' %}
+{% elseif type == 'tertiary' %}
+  {% set class = 'button--tertiary' %}
+{% else %}
+  {% set class = 'button--small' %}
+{% endif %}
+
+<a class="button inline-button {{class}}" href="{{url}}">{{label}}</a>

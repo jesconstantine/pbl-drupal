@@ -1,0 +1,11 @@
+<div class='code-snippet-container'>
+  {% if code.label %}
+  {% set text = code.label %}
+  {% include "h4.twig" %}
+  {% endif %}
+  <pre class="prism-wrapper">
+    <code class="{% if code.language %}language-{{code.language}}{% else %}language-undefined{% endif %}">
+      {% block codeSnippet %}{% endblock %}
+    </code>
+  </pre>
+</div>

@@ -1,0 +1,35 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.tab-window.no-image {
+  .img-col-text {
+  
+    @include breakpoint($bp3) {
+      @include make-col(12);
+    }
+    
+    @include breakpoint($bp4) {
+      .landing--w-rail & {
+        @include make-col(12);
+      }
+    }
+  } 
+}
+
+.tab-window {
+  position: absolute;
+  background-color: $white;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  margin-top: rhythm(.5);
+  
+  .img-w-text {
+    flex: 1 1 100%;
+  }
+  
+  &.is-active {
+    visibility: visible;
+    z-index: 4;
+  }
+}

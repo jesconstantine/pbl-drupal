@@ -1,0 +1,69 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+{% extends '_code-snippet.twig' %}
+
+{% block codeSnippet %}
+
+require 'akamai/edgegrid'
+require 'net/http'
+require 'uri'
+require 'json'
+require 'optparse'
+
+address = get_host("~/.edgerc","ccu")
+
+      http = Akamai::Edgegrid::HTTP.new(
+        address = address,
+        port = 443,
+      )
+
+
+options = {}
+
+OptionParser.new do |opts|
+    opts.banner = "Usage: diagnostic-tools.rb [opts]"
+
+    opts.on("-v", "--verbose", "Run verbosely") do |v|
+        options[:verbose] = v
+    end
+    opts.on("-d", "--debug", "Run with debug") do |v|
+        http.set_debug_output $stderr
+    end
+end.parse!
+
+baseuri = URI('https://' + http.host)
+
+http.setup_from_edgerc(:section => "ccu")
+
+def postPurgeRequest(baseuri, http, options, action="invalidate")
+    post_request = Net::HTTP::Post.new(
+        URI.join(baseuri.to_s, "/ccu/v3/invalidate/url").to_s,
+        initheader = { 'Content-Type' => 'application/json' }
+    )
+
+    post_request.body = {
+        :hostname => "bc.akamaiapibootcamp.com",
+        :objects => [
+                "/index.html"
+            ]
+    }.to_json
+
+    post_response = http.request(post_request)
+    if options[:verbose]
+        puts JSON.pretty_generate(JSON.parse(post_response.body))
+    end
+
+    return JSON.parse(post_response.body)
+
+end
+
+
+# Here's the main execution area for the program
+# Add a purge request
+
+puts "Adding to queue"
+postresult = postPurgeRequest(baseuri,http,options)
+puts postresult["detail"]
+
+{% endblock %}
+

@@ -1,0 +1,21 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.tag-list {
+  @include adjust-font-size-to($label, .9);
+  margin: rhythm(2) 0 0; 
+}
+
+.tag-list__list {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-list__item {
+  display: inline-block;
+}
+
+.tag-list__title {
+  font-weight: 700;
+}

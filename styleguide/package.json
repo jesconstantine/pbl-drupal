@@ -1,0 +1,157 @@
+{
+  "name": "palantir-lab",
+  "description": "A Pattern Lab starter kit.",
+  "repository": "https://github.com/palantirnet/palantir-lab",
+  "main": "gulpfile.js",
+  "version": "0.4.0-dev",
+  "engines": {
+    "node": ">=8.0 <10.0",
+    "yarn": "^1.0"
+  },
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.18.13",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
+    "fancylog": "^3.1.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-bump": "^2.8.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-filter": "^5.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-gh-pages-will": "^0.5.5",
+    "gulp-git": "^2.4.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-shell": "^0.6.3",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-tag-version": "^1.3.0",
+    "gulp-uglify": "^3.0.0",
+    "normalize.css": "^8.0.0",
+    "postcss-reporter": "^5.0.0",
+    "postcss-scss": "^1.0.2",
+    "support-for": "^1.0.7"
+  },
+  "settings": {
+    "root": "./public",
+    "src": {
+      "css": "source/assets/css/",
+      "scss": "source/assets/scss/",
+      "img": "source/assets/imgs/",
+      "fonts": "source/assets/fonts/",
+      "js": "source/assets/js/",
+      "assets": "source/assets/",
+      "icons": "source/_patterns/01-base/icons",
+      "components": "source/assets/components/"
+    },
+    "dest": {
+      "base": "public/",
+      "css": "source/assets/css/",
+      "js": "source/assets/js/",
+      "img": "source/assets/imgs/production/",
+      "fonts": "source/assets/fonts/",
+      "icons": "public/assets/icons",
+      "taxonomyIcons": "public/assets/icons/taxonomy",
+      "assets": "public/assets/"
+    },
+    "files": {
+      "script_custom": [
+        "source/assets/js/site/*.js"
+      ],
+      "script_libraries": [
+        "source/assets/js/libraries/drupal-attach-behaviors.js",
+        "source/assets/js/libraries/modernizr-custom.js",
+        "source/assets/js/libraries/*.js"
+      ],
+      "scss": [
+        "source/_patterns/base/*.scss",
+        "source/_patterns/base/**/*.scss",
+        "source/_patterns/atoms/*.scss",
+        "source/_patterns/atoms/**/*.scss",
+        "source/_patterns/molecules/*.scss",
+        "source/_patterns/molecules/**/*.scss",
+        "source/_patterns/organisms/*.scss",
+        "source/_patterns/organisms/**/*.scss",
+        "source/_patterns/templates/*.scss",
+        "source/_patterns/templates/**/*.scss",
+        "source/_patterns/**/**/*.scss",
+        "source/assets/scss/**/*.scss",
+        "source/assets/scss/*.scss"
+      ],
+      "stylesheet": [
+        "source/assets/scss/*.scss"
+      ],
+      "imgs": [
+        "source/assets/imgs/*.jpg",
+        "source/assets/imgs/*.jpeg",
+        "source/assets/imgs/*.png",
+        "source/assets/imgs/*.gif",
+        "source/assets/imgs/*.svg"
+      ],
+      "icons": [
+        "source/_patterns/01-base/icons/*.svg"
+      ],
+      "taxonomyIcons": [
+        "source/_patterns/01-base/icons/z icon taxonomy/*.svg"
+      ]
+    },
+    "deployment": {
+      "local": {
+        "path": "./public/**/*"
+      },
+      "remote": {
+        "host": "YOUR HOST"
+      },
+      "rsync": {
+        "options": "-avzh --delete -e ssh"
+      }
+    },
+    "patternlab": {
+      "styleguide": {
+        "files": [
+          "core/**"
+        ],
+        "dest": "public/"
+      },
+      "files": [
+        "source/_patterns/**/*.twig",
+        "source/_meta/**/*.twig",
+        "source/_patterns/**/*.json",
+        "source/_data/*.json",
+        "source/_patterns/**/*.md",
+        "source/_patterns/**/*.scss",
+        "source/_patterns/**/**/*.scss"
+      ]
+    }
+  },
+  "scripts": {
+    "default": "gulp default",
+    "serve": "gulp serve",
+    "watch": "gulp watch",
+    "test": "gulp test",
+    "deploy": "gulp deploy",
+    "assets": "gulp deployAssets",
+    "sg-assets": "scripts/deploy-sg.js"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "browsers": "last 2 versions",
+        "grid": "true"
+      },
+      "cssnano": {}
+    }
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "1.2.0"
+  }
+}

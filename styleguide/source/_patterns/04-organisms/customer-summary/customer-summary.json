@@ -1,0 +1,35 @@
+{
+  "customerSummary": {
+    "items" : [
+      {
+        "label" : "Customer",
+        "value" : "Dell Technologies"
+      },
+      {
+        "label" : "Products & Services",
+        "value" : [
+          {
+            "url" : "#",
+            "title" : "Enterprise Application Access (EAA)" 
+          },
+          {
+            "url" : "#",
+            "title" : "Edge Redirector" 
+          }
+        ]
+      },
+      {
+        "label" : "Industry",
+        "value" : "Technology"
+      },
+      {
+        "label" : "Organization Size",
+        "value" : "140,000+ Employees"
+      },
+      {
+        "label" : "Country",
+        "value" : "USA"
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+// @file
+// Centralize your imports here.
+// Styles are organized using the SMACSS technique.
+// @see http://smacss.com/book/
+
+// Add Vertical Rhythm Helpers
+@import "00-helpers/vertical-rhythm/vertical_rhythm";
+
+// Start with your Init file.
+@import "00-helpers/init";
+
+// Add custom mixins, functions, and helpers
+@import "00-helpers/helpers";
+
+// Base files
+@import "00-helpers/base";
+
+// Animations
+@import "00-helpers/animations";
+
+// Layout rules
+// Bootstrap Grid v4.0.0-beta.2 (https://getbootstrap.com)
+// Copyright 2011-2017 The Bootstrap Authors
+// Copyright 2011-2017 Twitter, Inc.
+// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+@import "01-grid/grid-base";
+
+@import "01-grid/functions";
+@import "01-grid/variables";
+
+@import "01-grid/mixins/breakpoints";
+@import "01-grid/mixins/grid-framework";
+@import "01-grid/mixins/grid";
+
+@import "01-grid/grid";
+@import "01-grid/utilities/flex";
+
+// Component (SMACSS module) rules 
+// Globbed from patterns directory
+@import "00-helpers/prism.scss";
+@import "00-helpers/slick.scss";
+@import "../../_patterns/base/*.scss";
+@import "../../_patterns/base/**/*.scss";
+@import "../../_patterns/atoms/*.scss";
+@import "../../_patterns/atoms/**/*.scss";
+@import "../../_patterns/molecules/*.scss";
+@import "../../_patterns/molecules/**/*.scss";
+@import "../../_patterns/organisms/*.scss";
+@import "../../_patterns/organisms/**/*.scss";
+@import "../../_patterns/templates/*.scss";
+@import "../../_patterns/templates/**/*.scss";
+@import "../../_patterns/**/**/*.scss";
+
+// WYSIWYG Components
+// These fall last in the cascade so they are not overwritten by other styles.
+
+
+// Print Styles
+@import "00-helpers/print";
+
+// @copyright Copyright (c) 2018 Palantir.net
+
+

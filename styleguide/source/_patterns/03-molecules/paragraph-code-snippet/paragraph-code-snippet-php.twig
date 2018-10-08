@@ -1,0 +1,56 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+{% extends '_paragraph-code-snippet.twig' %}
+
+{% block codeSnippet %}
+
+namespace Akamai\Open\Example;
+
+require_once __DIR__ . '/cli/init.php';
+
+class CcuClient
+{
+    /**
+     * @var \Akamai\Open\EdgeGrid\Client
+     */
+    protected $client;
+
+    public function __construct()
+    {
+        $this->client = \Akamai\Open\EdgeGrid\Client::createFromEdgeRcFile('ccu');
+    }
+
+    public function postPurgeRequest($hostname, $objects)
+    {
+        $purge_body = [
+            'hostname' => $hostname,
+            'objects' => $objects
+        ];
+
+        $response = $this->client->post('/ccu/v3/invalidate/url', [
+            'body' => json_encode($purge_body),
+            'headers' => ['Content-Type' => 'application/json']
+        ]);
+        return $response;
+    }
+}
+
+$ccu = new CcuClient();
+
+try {
+    $objects = [
+        "/index.html",
+        "/image.jpg"
+    ];
+
+    $purge = $ccu->postPurgeRequest('akamaiapibootcamp.com', $objects);
+    $response = json_decode($purge->getBody());
+    echo 'Success (' .$purge->getStatusCode(). ')' . PHP_EOL;
+    echo 'Estimated Purge Time: ' .$response->estimatedSeconds. 's' . PHP_EOL;
+} catch (\GuzzleHttp\Exception\ClientException $e) {
+    echo "An error occurred: " .$e->getMessage(). "\n";
+    echo "Please try again with --debug or --verbose flags.\n";
+}
+
+{% endblock %}
+

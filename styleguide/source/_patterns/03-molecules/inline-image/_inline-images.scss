@@ -1,0 +1,39 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+figure {
+  display: inline-block;
+  padding: 0;
+  float: left;
+  margin: $space-half $space-half $space-half 0;
+  
+  @include breakpoint($bp2) {
+    margin: $space-half $space $space-half 0;
+  }
+}
+
+.inline {
+  
+  img {
+    float: left;
+    margin: $space-half $space-half $space-half 0;
+    
+    @include breakpoint($bp2) {
+      margin: $space-half $space $space-half 0;
+    }
+  }
+  
+  figure img {
+    float: none;
+    margin: 0;
+  }
+}
+
+.inline-image {
+  padding: 0;
+  
+  img {
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+

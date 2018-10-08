@@ -1,0 +1,8 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<ol>
+  {% for item in items %}
+    {% set text = item.text %}
+    {% include "li.twig" %}
+  {% endfor %}
+</ol>

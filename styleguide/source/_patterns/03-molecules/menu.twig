@@ -1,0 +1,44 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<nav id="menu" class="menu">
+  <button id="menu-close" type="button" title="Close Menu" class="menu-trigger--close">{% include "arrow-left.svg" %}</button>
+  <ul class="menu-list">
+  {% for item in menu_items %}
+  {% if item.child_groups %}
+  <li class="menu-item menu-item--w-child">
+    <div class="menu-item__container">
+      {% if item.url %}
+      <a class="menu-item__link" href="{{ item.url }}">{{ item.label }}</a>
+      <button type="button" class="menu-trigger--secondary" title="Open Menu">{% include "wedge.svg" %}</button>
+      {% else %}
+      <button type="button" class="menu-trigger--secondary menu-trigger--no-link" title="Open Menu"><span>{{ item.label }}</span> {% include "wedge.svg" %}</button>
+      {% endif %}
+    </div>
+    <ul class="menu-item__children">
+      {% for item in item.child_groups %}
+      <li class="menu-item__child-group">
+        {% if item.label %}
+          {% if item.url %}
+          <span class="menu-item__label"><a href="{{item.url}}">{{ item.label }}</a></span>
+          {% else %}
+          <span class="menu-item__label">{{ item.label }}</span>
+          {% endif %}
+        {% endif %}
+        <ul class="menu-item__child-container">
+          {% for item in item.items %}
+          <li><a class="menu-item__child-link" href="{{ item.url }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% else %}
+  <li class="menu-item">
+    <div class="menu-item__container">
+      <a class="menu-item__link" href="{{ item.url }}">{{ item.label }}</a>
+    </div>
+  </li>
+  {% endif %}
+  {% endfor %}
+  </ul>
+</nav>

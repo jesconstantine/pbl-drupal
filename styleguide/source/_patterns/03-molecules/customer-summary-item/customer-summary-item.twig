@@ -1,0 +1,14 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<div class="customer-summary-item">
+  <h3 class="customer-summary-item__label">{{customerSummaryItem.label}}</h3>
+  <span class="customer-summary-item__value">
+    {% if customerSummaryItem.value is iterable %}
+      {% for item in customerSummaryItem.value %}
+        <a href="{{item.url}}">{{item.title}}</a><br>
+      {% endfor %}
+    {% else %}
+      {{customerSummaryItem.value}}
+    {% endif %}
+  </span>
+</div>

@@ -1,0 +1,87 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.card--img-left {
+  clear: both;
+  
+  .button {
+    position: static;
+    margin-top: rhythm(1.5);
+  }
+  
+  .card__link,
+  .card__no-link {
+    position: relative;
+  }
+
+  .card__image {
+    width: 100%;
+    height: 250px;
+
+    @include breakpoint($bp3) {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      width: 50%;
+    }
+
+    @include breakpoint($bp5) {
+      width: 60%;
+    }
+  }
+
+  .card__content {
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint($bp3) {
+      width: 50%;
+      margin-left: 50%;
+      padding-left: rhythm(2);
+    }
+
+    @include breakpoint($bp5) {
+      width: 40%;
+      margin-left: 60%;
+      min-height: 550px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  .landing--w-rail & {
+    .card__image {
+      @include breakpoint($bp3) {
+        width: 100%;
+        height: 250px;
+        position: relative;
+      }
+
+      @include breakpoint($bp4) {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        width: 50%;
+      }
+    }
+
+    .card__content {
+      @include breakpoint($bp3) {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding-left: rhythm(1.5);
+      }
+
+      @include breakpoint($bp4) {
+        width: 50%;
+        margin-left: 50%;
+        padding-left: rhythm(2);
+      }
+    }
+  }
+}
+
+.card__content-wrapper {
+  display: block;
+}

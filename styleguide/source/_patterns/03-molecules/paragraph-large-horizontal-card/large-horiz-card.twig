@@ -1,0 +1,47 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<article class="large-horiz-card {% if largeCard.backgroundColor %}card--reversed{% endif %}">
+  {% if largeCard.link.url %}<a href="{{ largeCard.link.url }}">{% endif %}
+  
+  <div class="large-horiz-card__block {% if largeCard.border.position %}card--border-{{largeCard.border.position}}{% endif %}" {% if largeCard.backgroundColor or largeCard.border.color %}style="{% if largeCard.backgroundColor %}background-color: {{largeCard.backgroundColor}};{% endif %}{% if largeCard.border.color %}border-color: {{largeCard.border.color}};{% endif %}"{% endif %}>
+    {% if largeCard.icon %}
+    {% set icon = largeCard.icon %}
+    {% include "icon-circle.twig" %}
+    {% endif %}
+    <div class="large-horiz-card__header-block">
+      
+      {% if largeCard.secondaryImg.position == 'top' %}
+      <img class="card__secondary-img" src="{{largeCard.secondaryImg.src}}" alt="{{largeCard.secondaryImg.alt}}">
+      {% endif %}
+        
+      {% if largeCard.eyebrow %}
+      {% set eyebrow = largeCard.eyebrow %}
+      {% include "eyebrow.twig" %}
+      {% endif %}
+      <h2 class="large-horiz-card__title">{{ largeCard.title }}</h2>
+      
+      {% if largeCard.desc %}
+      <div class="large-horiz-card__desc">
+        {{ largeCard.desc }}
+      </div>
+      {% endif %}
+        
+      {% if largeCard.link.url %}
+        {% if largeCard.link.title %}
+          {% if largeCard.link.type == 'primary' %}
+          <span class="button button--small">{{largeCard.link.title}}</span>
+          {% elseif largeCard.link.type == 'tertiary' %}
+          <span class="button button--small button--tertiary">{{largeCard.link.title}}</span>
+          {% else %}
+          <span class="button button--small button--secondary">{{largeCard.link.title}}</span>
+          {% endif %}
+        {% endif %}
+      {% endif %}
+      
+      {% if largeCard.secondaryImg.position == 'bottom' %}
+      <img class="card__secondary-img--bottom" src="{{largeCard.secondaryImg.src}}" alt="{{largeCard.secondaryImg.alt}}">
+      {% endif %}      
+    </div>
+  </div>
+  
+  {% if largeCard.link.url %}</a>{% endif %}
+</article>

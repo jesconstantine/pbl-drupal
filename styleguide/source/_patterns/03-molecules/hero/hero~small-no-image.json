@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "size": "small",
+    "title": "DevOps",
+    "desc": null,
+    "cta": {
+      "title": null,
+      "url": null
+    },
+    "featured_img": null 
+  }
+}

@@ -1,0 +1,21 @@
+# Project Ignores
+.DS_Store
+export/*
+
+# Ignore npm dependencies
+node_modules/
+npm-debug.log
+
+# Ignore generated CSS
+*.sass-cache/
+source/assets/css/*.css
+source/assets/css/*.css.map
+
+# Ignore PatternLab things
+public/*
+vendor/*
+node_modules/*
+.publish
+
+.idea/*
+yarn-error.log

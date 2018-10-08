@@ -1,0 +1,15 @@
+{
+  "customerSummaryItem": {
+    "label" : "Products & Services",
+    "value" : [
+      {
+        "url" : "#",
+        "title" : "Enterprise Application Access (EAA)" 
+      },
+      {
+        "url" : "#",
+        "title" : "Edge Redirector" 
+      }
+    ]
+  }
+}

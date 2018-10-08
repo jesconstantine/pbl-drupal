@@ -1,0 +1,17 @@
+{
+  "imgLeftCard": {
+    "url": "#",
+    "eyebrow": "Webinar",
+    "title": "Automating your workflow for Akamai with DevOps",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+    "cta": {
+      "url": "#",
+      "title": "Watch Now"
+    },
+    "mime": "svg",
+    "img": {
+      "src": "/assets/imgs/production/demo.svg",
+      "hex": "#042B4C"
+    }
+  }
+}

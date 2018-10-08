@@ -1,0 +1,15 @@
+<header class='section-header {% if sectionHeader.alignment == 'center' %} paragraph--center{% endif %}{% if sectionHeader.alignment == 'right' %} paragraph--right{% endif %}'>
+  {% if sectionHeader.eyebrow %}{% set eyebrow = sectionHeader.eyebrow %}
+  {% include "eyebrow.twig" %}
+  {% endif %}
+  {% set text = sectionHeader.title %}
+  {% include "h2.twig" %}
+  {% if sectionHeader.desc %}
+  <div class="paragraph-desc inline">
+    {% if src %}
+    {% include "inline-image.twig" %}
+    {% endif %}
+    {{sectionHeader.desc}}
+  </div>
+  {% endif %}
+</header>

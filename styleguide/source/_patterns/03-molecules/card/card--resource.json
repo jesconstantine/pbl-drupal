@@ -1,0 +1,13 @@
+{
+  "resource": {
+    "type": "download",
+    "id": "resource-1",
+    "title": "Hands-on Lab (download)",
+    "desc": "The hands-on labs were one of the most popular features of the Developer Zone, so we've made the lab and materials available here.",
+    "cta": "Download",
+    "url": "/assets/files/test-pdf.pdf",
+    "img": {
+      "src": "/assets/imgs/production/teaser-img.png"
+    }
+  }
+}

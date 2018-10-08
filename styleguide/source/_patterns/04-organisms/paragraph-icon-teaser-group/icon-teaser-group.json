@@ -1,0 +1,84 @@
+{
+  "iconTeasers": [
+    {
+      "color": "green",
+      "title": "Akamai Config",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "pink",
+      "title": "APIs",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "aqua",
+      "title": "Monitoring",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "magenta",
+      "title": "Connectors",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "red",
+      "title": "Client Libraries",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "gold",
+      "title": "Edge Logic",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "lilac",
+      "title": "Akamai CLI",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "aqua",
+      "title": "Monitoring",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "magenta",
+      "title": "Connectors",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "red",
+      "title": "Client Libraries",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    }
+  ]
+}

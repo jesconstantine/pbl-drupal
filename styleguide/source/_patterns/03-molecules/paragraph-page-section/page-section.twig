@@ -1,0 +1,12 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<section class="page-section {% if background == 'light-gray' %} page-section--light{% endif %}{% if background == 'dark-gray' %} page-section--dark{% endif %}">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {% block pageSection %}
+        <div class="sg-placeholder">Page Section Paragraphs</div>
+      {% endblock %}
+      </div>
+    </div>
+  </div>
+</section>

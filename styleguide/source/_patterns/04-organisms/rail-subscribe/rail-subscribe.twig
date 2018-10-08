@@ -1,0 +1,10 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<div class="rail">
+  <h2 class="rail__title">{{subscribe.title}}</h2>
+  <div>{{subscribe.desc}}</div>
+  <form class="rail__form">
+    <label class="element-invisible">Enter E-mail</label>
+    {% include "input-email.twig" with { "id": "email-subscribe", "placeholder": "Email Address" } %}
+    {% include "input-submit.twig" with { "id": "email-subscribe-submit", "value": "Subscribe" } %}
+  </form>
+</div>

@@ -1,0 +1,25 @@
+{
+  "pages": [
+    {
+      "number":"1",
+      "url": "#"
+    },
+    {
+      "number":"2",
+      "url": "#",
+      "active": true
+    },
+    {
+      "number":"3",
+      "url": "#"
+    },
+    {
+      "number":"4",
+      "url": "#"
+    },
+    {
+      "number":"5",
+      "url": "#"
+    }
+  ]
+}

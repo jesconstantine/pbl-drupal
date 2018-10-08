@@ -1,0 +1,29 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+{% extends '@templates/blog-listing.twig' %}
+
+{% block blogListingHero %}
+  {% include "hero.twig" %}
+{% endblock %}
+
+{% block blogListingMainBody %}
+  
+  {% set sectionHeader = sectionHeaderA %}
+  {% include "section-header.twig" %}
+  {% include "blog-teaser-card.twig" %}
+  {% set sectionHeader = sectionHeaderB %}
+  {% include "section-header.twig" %}
+  <ul class="blog-listing-feed">
+    <li>{% include "blog-teaser-card.twig" %}</li>
+    <li>{% include "blog-teaser-card.twig" %}</li>
+    <li>{% include "blog-teaser-card.twig" %}</li>
+    <li>{% include "blog-teaser-card.twig" %}</li>
+    <li>{% include "blog-teaser-card.twig" %}</li>
+    <li>{% include "blog-teaser-card.twig" %}</li>
+    <li>{% include "blog-teaser-card.twig" %}</li>
+    <li>{% include "blog-teaser-card.twig" %}</li>
+    <li>{% include "blog-teaser-card.twig" %}</li>
+    <li>{% include "blog-teaser-card.twig" %}</li>
+  </ul>
+  {% include "pagination.twig" %}
+
+{% endblock %}

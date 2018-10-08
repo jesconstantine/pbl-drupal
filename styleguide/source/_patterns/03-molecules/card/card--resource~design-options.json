@@ -1,0 +1,30 @@
+{
+  "resource": {
+    "type": "image",
+    "id": "resource-1",
+    "title": "Hands-on Lab (download)",
+    "desc": "The hands-on labs were one of the most popular features of the Developer Zone, so we've made the lab and materials available here.",
+    "cta": "View Image",
+    "cta_type": "primary",
+    "url": "/assets/files/test-pdf.pdf",
+    "img": {
+      "src": "/assets/imgs/production/teaser-img.png"
+    },
+    "border": {
+      "color": "#FF9934",
+      "position": "bottom"
+    },
+    "backgroundColor": "#042B4C",
+    "secondaryImg": {
+      "src": "/assets/imgs/production/secondary-top.png",
+      "alt": "alt text",
+      "position": "top"
+    },
+    "media": [
+      {
+        "src": "/assets/imgs/production/image-1.jpg",
+        "alt": "alt text"
+      }
+    ]
+  }
+}

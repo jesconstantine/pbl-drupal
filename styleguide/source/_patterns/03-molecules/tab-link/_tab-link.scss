@@ -1,0 +1,71 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.tab-link {
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+  text-align: center;
+  margin-right: rhythm(.5);
+  
+  button {
+    display: flex;
+    flex-direction: column;
+    color: $gray-dk;
+    padding: rhythm(.5) rhythm(1);
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background-color: transparent;
+    border-radius: 0;
+    max-width: 250px;
+    min-width: 120px;
+    
+    &:active,
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid $orange;
+      text-decoration: none;
+      background-color: transparent;
+      transform: scale(1);
+      
+      .icon-circle {
+        background-color: $orange;
+      }
+    }
+  }
+  
+  .icon-circle {
+    margin-bottom: rhythm(.5);
+    background-color: $blue-gray;
+    margin: 0 auto 10px;
+  }
+  
+  
+  &.is-active {
+    button {
+      border-bottom: 2px solid $orange;
+      position: relative;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        left: calc(50% - 5px);
+        display: inline-block;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid $orange;
+      }
+    }
+    
+    .icon-circle {
+      background-color: $orange;
+    }
+  }
+}
+
+.tab-link__label {
+  @include adjust-font-size-to(16px, .85);
+  display: block;
+  margin: 0 auto;
+}

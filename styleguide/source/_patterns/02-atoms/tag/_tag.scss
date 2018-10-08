@@ -1,0 +1,16 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.tag {
+  margin: 0;
+  
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+  
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

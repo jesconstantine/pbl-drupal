@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "size": "default",
+    "title": "Akamai for DevOps",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+    "cta": {
+      "title": "Learn More",
+      "url": "#"
+    },
+    "featured_img": {
+      "src": null,
+      "alt": null
+    },
+    "backgroundColor": "#f4a442",
+    "backgroundImg" : "/assets/imgs/production/ban-adaptive-media-player-R1_02_1.png"
+  }
+}

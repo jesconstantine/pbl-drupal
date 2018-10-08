@@ -1,0 +1,20 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<div class="rail">
+  <h2 class="rail__title">Filter Results</h2>
+  <ul class="rail__list rail-filter--list">
+    {% for filter in filters %}
+      <li><a href="filter.url">{{filter.title}} ({{filter.count}})</a></li>
+    {% endfor %}
+  </ul>
+  <div id="rail-filter--overflow" class="rail-filter--overflow">
+    <ul class="rail__list rail-filter--list">
+      {% for filter in overflow.filters %}
+        <li><a href="filter.url">{{filter.title}} ({{filter.count}})</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <button type="button" id="rail-filter--trigger" class="button--secondary button--small rail-filter--trigger">
+    <span class="cta-open">See All</span>
+    <span class="cta-close">See Fewer</span>
+  </button>
+</div>

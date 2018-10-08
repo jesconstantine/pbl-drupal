@@ -1,0 +1,215 @@
+//
+// Initialization partial
+//
+// To make it easier to use all variables and mixins in any Sass file in this
+// theme, each .scss file has a @import "init" declaration. And this _init.scss
+// file is in charge of importing all the other partials needed for the theme.
+//
+// This initialization partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Next we import NPM packages (Sass mixin libraries).
+// - Last we define our custom mixins for this theme.
+//
+// @copyright Copyright (c) 2018 Palantir.net
+
+// =============================================================================
+// Browser Support Declarations, Support same browsers as normalize.css v8
+// =============================================================================
+
+$support-for: (
+  ie: 9, '*': -4
+);
+
+// =============================================================================
+// Variables
+// =============================================================================
+
+// Vertical_rhythm package is a powerful tool to set up a vertical
+// rhythm for your entire page. You can see some of its mixins and functions in
+// 
+// Use these in the normalize.scss file.
+
+// BASE FONT VARIALBES
+
+$base-font-size: 17px; // The font size set on the root html element.
+$base-line-height: 23px; // This line-height determines the basic unit of vertical rhythm.
+
+// TYPE SCALE
+$xxl-heading: 2.35 * $base-font-size; // 42
+$xl-heading: 1.9 * $base-font-size; // 34
+$lg-heading: 1.35 * $base-font-size; // 24
+$md-heading: 1.20 * $base-font-size; // 22
+$sm-heading: 1.10 * $base-font-size; // 20
+$text: 1 * $base-font-size;
+$label: .8 * $base-font-size;
+$crumb: .6 * $base-font-size;
+
+$hero-heading-lg: 4 * $base-font-size; // 72
+$hero-heading-sm: 3 * $base-font-size; // 72
+
+// BASE HEADING SIZES
+// Used in Normalize
+$h1-font-size: $xxl-heading;
+$h2-font-size: $xl-heading;
+$h3-font-size: $lg-heading;
+$h4-font-size: $md-heading;
+$h5-font-size: $sm-heading;
+$h6-font-size: $text;
+
+
+// FONT FAMILY DECLARATIONS
+@font-face{
+    font-family:"Avenir";
+    src:url("../fonts/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix");
+    src:url("../fonts/edefe737-dc78-4aa3-ad03-3c6f908330ed.eot?#iefix") format("eot"),url("../fonts/0078f486-8e52-42c0-ad81-3c8d3d43f48e.woff2") format("woff2"),url("../fonts/908c4810-64db-4b46-bb8e-823eb41f68c0.woff") format("woff"),url("../fonts/4577388c-510f-4366-addb-8b663bcc762a.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face{
+    font-family:"Avenir";
+    src:url("../fonts/63a166cb-be60-435c-a056-75172e43efa5.eot?#iefix");
+    src:url("../fonts/63a166cb-be60-435c-a056-75172e43efa5.eot?#iefix") format("eot"),url("../fonts/a59168c1-917d-4de9-a244-0316c057c357.woff2") format("woff2"),url("../fonts/6dc0e7d8-9284-44e1-8f05-984a41daa3a4.woff") format("woff"),url("../fonts/2315df7a-8bc2-433d-bf0a-162fc0063de0.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face{
+    font-family:"Avenir";
+    src:url("../fonts/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix");
+    src:url("../fonts/710789a0-1557-48a1-8cec-03d52d663d74.eot?#iefix") format("eot"),url("../fonts/065a6b14-b2cc-446e-9428-271c570df0d9.woff2") format("woff2"),url("../fonts/65d75eb0-2601-4da5-a9a4-9ee67a470a59.woff") format("woff"),url("../fonts/c70e90bc-3c94-41dc-bf14-caa727c76301.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+    font-family:"Avenir";
+    src:url("../fonts/d8c50fcc-bc32-4f31-8c24-b170c64e2254.eot?#iefix");
+    src:url("../fonts/d8c50fcc-bc32-4f31-8c24-b170c64e2254.eot?#iefix") format("eot"),url("../fonts/476612d9-282d-4f76-95cd-b4dd31e7ed21.woff2") format("woff2"),url("../fonts/f1ebae2b-5296-4244-8771-5f40e60a564a.woff") format("woff"),url("../fonts/04d1bf6c-070d-4b7e-9498-6051c9f0c349.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face{
+    font-family:"Avenir";
+    src:url("../fonts/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix");
+    src:url("../fonts/57bf7902-79ee-4b31-a327-1bbf59a3d155.eot?#iefix") format("eot"),url("../fonts/b290e775-e0f9-4980-914b-a4c32a5e3e36.woff2") format("woff2"),url("../fonts/4b978f72-bb48-46c3-909a-2a8cd2f8819c.woff") format("woff"),url("../fonts/9bdf0737-f98c-477a-9365-ffc41b9d1285.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family:"Avenir";
+    src:url("../fonts/1e9b2738-9316-4b0c-97c0-5423b69ea147.eot?#iefix");
+    src:url("../fonts/1e9b2738-9316-4b0c-97c0-5423b69ea147.eot?#iefix") format("eot"),url("../fonts/1a7173fa-062b-49ad-9915-bc57d3bfc1f5.woff2") format("woff2"),url("../fonts/cdda031e-26e9-4269-83d1-5a218caa10db.woff") format("woff"),url("../fonts/6d1ce413-19e7-4b43-b328-6cdedc58b35a.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face{
+    font-family:"Avenir";
+    src:url("../fonts/e0542193-b2e6-4273-bc45-39d4dfd3c15b.eot?#iefix");
+    src:url("../fonts/e0542193-b2e6-4273-bc45-39d4dfd3c15b.eot?#iefix") format("eot"),url("../fonts/17b90ef5-b63f-457b-a981-503bb7afe3c0.woff2") format("woff2"),url("../fonts/c9aeeabd-dd65-491d-b4be-3e0db9ae47a0.woff") format("woff"),url("../fonts/25f994de-d13f-4a5d-a82b-bf925a1e054d.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face{
+    font-family:"Avenir";
+    src:url("../fonts/cebcf56a-ea7e-4f5c-8110-a7ee367c1f91.eot?#iefix");
+    src:url("../fonts/cebcf56a-ea7e-4f5c-8110-a7ee367c1f91.eot?#iefix") format("eot"),url("../fonts/deb5e718-7abb-4df3-9365-edfa95317090.woff2") format("woff2"),url("../fonts/04801919-17ee-4c6b-8b17-eb1965cb3ed6.woff") format("woff"),url("../fonts/cee053ec-4b41-4506-a1fe-796261690610.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face{
+    font-family:"Avenir";
+    src:url("../fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix");
+    src:url("../fonts/6af9989e-235b-4c75-8c08-a83bdaef3f66.eot?#iefix") format("eot"),url("../fonts/d513e15e-8f35-4129-ad05-481815e52625.woff2") format("woff2"),url("../fonts/61bd362e-7162-46bd-b67e-28f366c4afbe.woff") format("woff"),url("../fonts/ccd17c6b-e7ed-4b73-b0d2-76712a4ef46b.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{
+    font-family:"Avenir";
+    src:url("../fonts/e6b412d9-d1ed-4b17-bb93-a6911df8640d.eot?#iefix");
+    src:url("../fonts/e6b412d9-d1ed-4b17-bb93-a6911df8640d.eot?#iefix") format("eot"),url("../fonts/3c210c80-960f-4684-850b-25390b4d08af.woff2") format("woff2"),url("../fonts/cb5c71ad-e582-4d00-929c-67fbfaeb1c27.woff") format("woff"),url("../fonts/9ced8e96-4602-4507-8c20-4ff381949a9a.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+// The following font family declarations are based on the Microsoft core web
+// fonts which are common fonts available on most computer systems. The DejaVu
+// and Nimbus Sans fonts are commonly available on Linux systems where the MS
+// fonts are less common. Tahoma and Helvetica are also widely available.
+
+// First, let's create some Base font stacks.
+$georgia: Georgia, "Times New Roman", "DejaVu Serif", serif;
+$helvetica: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+
+$avenir: 'Avenir', $helvetica;
+
+// Now, Create your custom font stacks
+$sans: $avenir;
+$serif: $georgia;
+$mono: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Last, determine which fonts to add to these variables used in normalize.scss
+$base-font-family: $sans; // The font family set on the html element.
+$font-monospace: $mono;
+
+
+// =============================================================================
+// Color Variables
+// =============================================================================
+
+// Primary palette
+$blue-lt: #53b1e0;
+$blue: #3399CC;
+$orange: #FF9934;
+$blue-gray: #596773;
+$blue-gray-dk: #042B4C;
+
+$gray-dk: #333333;
+$gray-lt: #F0F1F2;
+$white: #ffffff;
+$black: #000000;
+
+// tertiary colors
+$gold: #FDBC51;
+$pink: #E15EA3;
+$aqua: #43BEAC;
+$red: #EE695C;
+$lilac: #9888C0;
+$green: #CDDA29;
+
+// Helper colors
+$yellow: #ff0; // Mark
+
+
+// =============================================================================
+// Breakpoint Variables
+//
+// These determine the major breakpoints used most consistently throughout 
+// your site. They are used with the breakpoint-sass mixin.
+// =============================================================================
+
+// Breakpoint Variables
+$bp1: 400px;
+$bp2: 600px;
+$bp3: 900px;
+$bp4: 1100px;
+$bp5: 1600px;
+
+$nav-breakpoint: 1040px;
+
+// =============================================================================
+// Spacing Variables
+//
+// These variables help you maintain consistent spacing throughout your site.
+// By default, these are used in inline components (blockquote, image, video)
+// =============================================================================
+
+$space: rhythm(2.5);
+$space-half: rhythm(1.25);
+
+// =============================================================================
+// Partials to be shared with all .scss files.
+// =============================================================================
+// Normalize
+@import "node_modules/normalize.css/normalize";
+// Support-for
+@import "node_modules/support-for/sass/_support-for.scss";
+// Add the Breakpoint mixin.
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";

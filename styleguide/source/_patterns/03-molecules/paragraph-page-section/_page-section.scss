@@ -1,0 +1,43 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.page-section {
+  padding: rhythm(2.5) 0;
+  clear: both;
+}
+
+.page-section--light {
+  background-color: $gray-lt;
+}
+
+.page-section--dark {
+  background-color: $blue-gray;
+  
+  .img-w-text,
+  .section-header,
+  .large-icon-teaser,
+  .full-cta,
+  .product-feature {
+    .button--secondary {
+      border-color: $white;
+      color: $white;
+    }
+    
+    .button--tertiary {
+      color: $blue-lt;
+      
+      &::after {
+        background-image: url('../imgs/production/chevron-small-right-lt-blue.svg');
+      }
+    }
+    .inline {
+      h1, h2, h3, h4, h5, h6 {
+        color: $white;
+      } 
+      
+      a:link,
+      a:visited {
+        color: $white;
+      }
+    }
+  }
+}

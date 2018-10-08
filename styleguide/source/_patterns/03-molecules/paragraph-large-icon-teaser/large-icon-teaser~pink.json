@@ -1,0 +1,19 @@
+{
+  "largeIconTeaser": {
+    "color": "pink",
+    "title": "Fast Metadata Interaction",
+    "desc": null,
+    "primary_link": {
+      "url": "#",
+      "title": "Learn More 1"
+    },
+    "secondary_link": {
+      "url": "#",
+      "title": "Learn More 2"
+    },
+    "tertiary_link": {
+      "url": "#",
+      "title": "Learn More 3"
+    }
+  }
+}

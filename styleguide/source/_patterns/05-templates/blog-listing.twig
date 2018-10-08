@@ -1,0 +1,40 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+{% extends '@templates/default.twig' %}
+
+{% block pageContent %}  
+  
+  {% block blogListingHero %}
+    <div class="sg-placeholder">Blog Listing</div>
+  {% endblock %}
+
+  {% block blogListingContent %}
+  <div class="page landing--w-rail">
+    <div class="container">
+      <div class="row">
+
+        {% block blogListingMain %}
+          <div class="col-md-8 col-lg-9">
+            <div class="format_headers">
+            {% block blogListingMainBody %}
+              <div class="sg-placeholder">Blog Listing Body Content</div>
+            {% endblock %}
+            </div>
+          </div>
+        {% endblock %}
+
+        <aside class="col-md-4 col-lg-3 order-md-first">
+          {% block blogListingRail %}
+            {% include "rail-filter.twig" %}
+            {% include "rail-subscribe.twig" %}
+          {% endblock %}
+        </aside>
+      
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock %}
+  
+{% endblock %}
+

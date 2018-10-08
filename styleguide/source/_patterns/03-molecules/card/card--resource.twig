@@ -1,0 +1,87 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<article class="card card--resource {% if resource.backgroundColor %}card--reversed{% endif %}">
+    
+  {% if (resource.type == 'image') or (resource.type == 'imageGallery') or (resource.type == 'video') %}
+    <button data-modal="#{{resource.id}}" class="card__link resource-modal-trigger {% if resource.border.position %}card--border-{{resource.border.position}}{% endif %}" aria-controls="#{{resource.id}}" {% if resource.backgroundColor or resource.border.color %}style="{% if resource.backgroundColor %}background-color: {{resource.backgroundColor}};{% endif %}{% if resource.border.color %}border-color: {{resource.border.color}};{% endif %}"{% endif %}>
+  {% else %}
+    <a class="card__link {% if resource.border.position %}card--border-{{resource.border.position}}{% endif %}" href="{{resource.url}}" {% if resource.backgroundColor or resource.border.color %}style="{% if resource.backgroundColor %}background-color: {{resource.backgroundColor}};{% endif %}{% if resource.border.color %}border-color: {{resource.border.color}};{% endif %}"{% endif %}>
+  {% endif %}
+    
+    {% if resource.img.src %}
+    <div class="card__image" style="background-image: url('{{resource.img.src}}');"></div>
+    {% endif %}
+    
+    <div class="card__content">
+      {% if resource.secondaryImg.position == 'top' %}
+        <img class="card__secondary-img" src="{{resource.secondaryImg.src}}" alt="{{resource.secondaryImg.alt}}">
+      {% endif %}
+      
+      {% set eyebrow = 'resources' %}
+      {% include "eyebrow.twig" %}
+      
+      <h3 class="card__title">{{resource.title}}</h3>
+      
+      {% if resource.desc %}        
+      <div class="card__desc">
+        {{resource.desc}}
+      </div>
+      {% endif %}
+      
+      {% if resource.cta %}
+        {% if resource.cta_type == 'primary' %}
+        <span class="button button--small">{{resource.cta}}</span>
+        {% elseif resource.cta_type == 'tertiary' %}
+        <span class="button button--small button--tertiary">{{resource.cta}}</span>
+        {% else %}
+        <span class="button button--small button--secondary">{{resource.cta}}</span>
+        {% endif %}
+      {% endif %}
+      
+      {% if resource.secondaryImg.position == 'bottom' %}
+        <img class="card__secondary-img--bottom" src="{{resource.secondaryImg.src}}" alt="{{resource.secondaryImg.alt}}">
+      {% endif %}
+    </div>
+    
+  {% if (resource.type == 'image') or (resource.type == 'imageGallery') or (resource.type == 'video') %}
+  </button>
+  {% else %}
+  </a>
+  {% endif %}
+  {% if (resource.type == 'image') or (resource.type == 'imageGallery') or (resource.type == 'video') %}
+  <div id="{{resource.id}}" class="resource-modal">
+    
+    <div class="resource-modal-container {% if resource.type == 'video' %}has-video{% endif %}">
+    {% if resource.type == 'image' %}
+      {% for media in resource.media %}
+      <img src="{{media.src}}" alt="{{media.alt}}" />
+      {% endfor %}
+    {% endif %}
+    
+    {% if resource.type == 'imageGallery' %}
+      <div class="resource-gallery">
+        {% for media in resource.media %}
+        <div class="resource-gallery__slide">
+          <img src="{{media.src}}" alt="{{media.alt}}" />
+        </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    
+    {% if resource.type == 'video' %}
+      {% for media in resource.media %}
+        <figure class="resource-video">
+          <div class="inline-video-container">
+            <iframe src="{{ media.src }}" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </figure>
+      {% endfor %}
+    {% endif %}
+    
+      <button class="resource-modal-close" title="Close the Modal" type="button">Close</button>
+    </div>
+    
+    
+  </div>
+  {% endif %}
+</article>
+

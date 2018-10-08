@@ -1,0 +1,17 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+{# Drupal breadcrumbs markup #}
+
+<nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+  <h2 class="visually-hidden">Breadcrumb</h2>
+  <ol>
+  {% for breadcrumb in breadcrumbs %}
+    {% if breadcrumb.link %}
+      {% if loop.last %}
+      <li>{{breadcrumb.label}}</li>
+      {% else %}
+      <li><a href="{{breadcrumb.link}}">{{breadcrumb.label}}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  </ol>
+</nav>

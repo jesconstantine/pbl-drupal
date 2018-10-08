@@ -1,0 +1,39 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<header class="hero {% if hero.orientation == 'right'%}hero--right {% endif %}{% if hero.size == 'small' %} hero--small{% endif %} {% if hero.backgroundImg %}hero--background{% endif %}" {% if hero.backgroundImg or hero.backgroundColor %}style="{% if hero.backgroundImg %}background-image: url('{{hero.backgroundImg}}');{% endif %} {% if hero.backgroundColor %}background-color: {{hero.backgroundColor}};{% endif %}{% endif %}">
+  {% if hero.cta.url %}
+    <a class="hero__link" href="{{hero.cta.url}}">
+  {% endif %}
+  <div class="container">
+
+    <div class="row hero-row">
+      {% if hero.title or hero.desc or hero.cta.title %}
+      <div class="hero-block">
+        {% if hero.title %}
+        <h1 class="hero__title">{{ hero.title }}</h1>
+        {% endif %}
+        {% if hero.desc %}
+        <div class="hero__desc">
+          {{ hero.desc }}
+        </div>
+        {% endif %}
+        {% if hero.cta.title %}
+        <span class="button" href="{{hero.cta.url}}">{{hero.cta.title}}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+      
+      {% if hero.featured_img.src or hero.backgroundImg %}
+      <div class="hero-image {% if hero.featured_img.src == false %}hero-image--none{% endif %}">
+        {% if hero.featured_img.src %}
+        {% set src = hero.featured_img.src %}
+        {% set alt = hero.featured_img.alt %}
+        {% include "image.twig" %}
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% if hero.cta.url %}
+  </a>
+  {% endif %}
+</header>

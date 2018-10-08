@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }}">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    
+    {# Fonts.com script // Akamai #}
+    <script type="text/javascript">
+    var MTIProjectId='7353c631-b4a1-4c59-91cd-4416b6001553';
+     (function() {
+            var mtiTracking = document.createElement('script');
+            mtiTracking.type='text/javascript';
+            mtiTracking.async='true';
+            mtiTracking.src='../../assets/js/no-min/mtiFontTrackingCode.js';
+            (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+       })();
+    </script>
+    
+    {# Swiftype Scrip // For styleguide only #}
+    <script type="text/javascript">
+      (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+                   e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+                  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+      _st('install','CLvgtFmxKWyXZPw6wHQR');
+    </script>
+    
+    {# custom styles #}
+    <link rel="stylesheet" href="../../assets/css/styles.min.css?{{ cacheBuster }}" media="all" />
+    {# Patternlab styles #}
+    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.min.css?{{ cacheBuster }}" media="all" />
+    
+    <link rel="icon" type="image/png" href="../../favicon.ico" sizes="32x32" />
+    
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    {{ patternLabHead | raw }}
+    <!-- End Pattern Lab -->
+    
+  </head>
+  <body class="{{ bodyClass }}">
+  

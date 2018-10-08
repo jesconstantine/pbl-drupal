@@ -1,0 +1,372 @@
+{ 
+  "landingBody": "true",
+  "page": {  
+    "grandparent": "Get Started",
+    "parent": "Browse Get Started",
+    "name": "Setup Your Environment",
+    "active": "Get Started with Akamai"
+  },
+  "landingRail": "true",
+  "hero": {
+    "size": "small",
+    "title": "Getting Started",
+    "featured_img": {
+      "src": "/assets/imgs/production/hero-image--small.png",
+      "alt": "Placeholder alt text"
+    } 
+  },
+  "sectionHeader": {
+    "alignment": "default",
+    "eyebrow": "Eyebrow Text",
+    "title": "Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse."
+  },
+  "imgText": {
+    "alignment": "default",
+    "eyebrow": "Eyebrow Text",
+    "title": "Lorem ipsum dolor sit amet",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+    "cta1": {
+      "url": "#",
+      "title": "Call to Action"
+    },
+    "cta2": {
+      "url": "#",
+      "title": "Call to Action 2"
+    },
+    "cta3": {
+      "url": "#",
+      "title": "Call to Action 3"
+    },
+    "img": {
+      "src": "/assets/imgs/production/hero-image--home.png",
+      "alt": "Placeholder alt text"
+    },
+    "clip": true
+  },
+  "fullCta": {
+    "alignment": "default",
+    "eyebrow": "Eyebrow Text",
+    "title": "Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+    "cta": {
+      "url": "#",
+      "title": "Call to Action"
+    }
+  },
+  "cardGroup": [
+    {
+      "url": "#",
+      "eyebrow": "Webinar",
+      "title": "Automating your workflow for Akamai with DevOps",
+      "eventDate": "Wed, Aug 30",
+      "eventTime": "9am PDT",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Watch Now"
+      },
+      "img": {
+        "src": "/assets/imgs/production/teaser-img.png"
+      }
+    },
+    {
+      "url": "#",
+      "eyebrow": "Webinar",
+      "title": "Automating your workflow for Akamai with DevOps",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Watch Now"
+      },
+      "img": {
+        "src": "/assets/imgs/production/teaser-img.png"
+      }
+    },
+    {
+      "url": "#",
+      "eyebrow": "Webinar",
+      "title": "Automating your workflow for Akamai with DevOps",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Watch Now"
+      },
+      "img": {
+        "src": "/assets/imgs/production/teaser-img.png"
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "tabId": "tab-1",
+      "panelId": "panel-1",
+      "icon": "icon placeholder",
+      "label": "Tab 1",
+      "active": "true",
+      "alignment": "default",
+      "eyebrow": "Eyebrow Text",
+      "title": "Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Call to Action"
+      },
+      "img": {
+        "src": "/assets/imgs/production/hero-image--home.png",
+        "alt": "Placeholder alt text"
+      }
+    },
+    {
+      "tabId": "tab-2",
+      "panelId": "panel-2",
+      "icon": "icon placeholder",
+      "label": "Tab 2",
+      "alignment": "default",
+      "eyebrow": "Eyebrow Text",
+      "title": "Tab 2 Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Call to Action"
+      },
+      "img": {
+        "src": "/assets/imgs/production/hero-image--home.png",
+        "alt": "Placeholder alt text"
+      }
+    },
+    {
+      "tabId": "tab-3",
+      "panelId": "panel-3",
+      "icon": "icon placeholder",
+      "label": "Tab 3",
+      "alignment": "default",
+      "eyebrow": "Eyebrow Text",
+      "title": " Tab 3 Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Call to Action"
+      },
+      "img": null
+    },
+    {
+      "tabId": "tab-4",
+      "panelId": "panel-4",
+      "icon": "icon placeholder",
+      "label": "Tab 4",
+      "alignment": "default",
+      "eyebrow": "Eyebrow Text",
+      "title": "Tab 4 Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Call to Action"
+      },
+      "img": {
+        "src": "/assets/imgs/production/hero-image--home.png",
+        "alt": "Placeholder alt text"
+      }
+    }
+  ],
+  "iconTeasers": [
+    {
+      "color": "green",
+      "title": "Akamai Config",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "pink",
+      "title": "APIs",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "aqua",
+      "title": "Monitoring",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "red",
+      "title": "Client Libraries",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "gold",
+      "title": "Edge Logic",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    },
+    {
+      "color": "lilac",
+      "title": "Akamai CLI",
+      "link": {
+        "url": "#",
+        "title": "Learn More"
+      }
+    }
+  ],
+  "largeIconTeaser1": {
+    "color": null,
+    "title": "Fast Metadata Interaction",
+    "desc": "With Fast Activation, you can publish property configuration changes from the Property Manager UI and API (PAPI) to the Akamai Production Network in approximately 15 minutes or to the Akamai Staging Network in approximately 3 minutes.",
+    "primary_link": {
+      "url": "#",
+      "title": "Learn More"
+    },
+    "secondary_link": {
+      "url": "#",
+      "title": "Learn More"
+    },
+    "tertiary_link": {
+      "url": "#",
+      "title": "Learn More"
+    }
+  },
+  "largeIconTeaser2": {
+    "color": null,
+    "title": "Fast Metadata Interaction",
+    "desc": "With Fast Activation, you can publish property configuration changes from the Property Manager UI and API (PAPI) to the Akamai Production Network in approximately 15 minutes or to the Akamai Staging Network in approximately 3 minutes.",
+    "secondary_link": {
+      "url": "#",
+      "title": "Learn More"
+    }
+  },
+  "largeIconTeaser3": {
+    "color": "gold",
+    "title": "Fast Metadata Interaction",
+    "desc": "With Fast Activation, you can publish property configuration changes from the Property Manager UI and API (PAPI) to the Akamai Production Network in approximately 15 minutes or to the Akamai Staging Network in approximately 3 minutes.",
+    "tertiary_link": {
+      "url": "#",
+      "title": "Learn More"
+    }
+  },
+  "largeIconTeaser4": {
+    "color": "aqua",
+    "title": "Fast Metadata Interaction",
+    "desc": "With Fast Activation, you can publish property configuration changes from the Property Manager UI and API (PAPI) to the Akamai Production Network in approximately 15 minutes or to the Akamai Staging Network in approximately 3 minutes.",
+    "tertiary_link": {
+      "url": "#",
+      "title": "Learn More"
+    }
+  },
+  "resources": [
+    {
+      "type": "image",
+      "url": null,
+      "id": "resource-1",
+      "title": "Hands-on Lab Image",
+      "desc": "The hands-on labs were one of the most popular features of the Developer Zone, so we've made the lab and materials available here.",
+      "cta": "View Full Image",
+      "img": {
+        "src": "/assets/imgs/production/teaser-img.png"
+      },
+      "media": [
+        {
+          "src": "/assets/imgs/production/image-1.jpg",
+          "alt": "alt text"
+        }
+      ]
+    },
+    {
+      "type": "externalLink",
+      "url": "https://developer.akamai.com/",
+      "id": "resource-2",
+      "title": "Hands-on Lab (external link)",
+      "desc": "The hands-on labs were one of the most popular features of the Developer Zone, so we've made the lab and materials available here.",
+      "cta": "Learn More",
+      "img": {
+        "src": "/assets/imgs/production/teaser-img.png"
+      }
+    },
+    {
+      "type": "video",
+      "url": null,
+      "id": "resource-3",
+      "title": "Hands-on Lab Video",
+      "desc": "The hands-on labs were one of the most popular features of the Developer Zone, so we've made the lab and materials available here.",
+      "cta": "Watch the Video",
+      "img": {
+        "src": "/assets/imgs/production/teaser-img.png"
+      },
+      "media": [
+        {
+          "src": "https://www.youtube.com/embed/NpEaa2P7qZI"
+        }
+      ]
+    },
+    {
+      "type": "imageGallery",
+      "url": null,
+      "id": "resource-4",
+      "title": "Hands-on Lab Gallery",
+      "desc": "The hands-on labs were one of the most popular features of the Developer Zone, so we've made the lab and materials available here.",
+      "cta": "View Gallery",
+      "img": {
+        "src": "/assets/imgs/production/teaser-img.png"
+      },
+      "media": [
+        {
+          "src": "/assets/imgs/production/image-1.jpg",
+          "alt": "alt text"
+        },
+        {
+          "src": "/assets/imgs/production/image-2.jpg",
+          "alt": "alt text"
+        },
+        {
+          "src": "/assets/imgs/production/image-3.jpg",
+          "alt": "alt text"
+        }
+      ]
+    },
+    {
+      "type": "imageGallery",
+      "url": null,
+      "id": "resource-5",
+      "title": "Hands-on Lab Gallery Two",
+      "desc": "The hands-on labs were one of the most popular features of the Developer Zone, so we've made the lab and materials available here.",
+      "cta": "View Gallery",
+      "img": {
+        "src": "/assets/imgs/production/teaser-img.png"
+      },
+      "media": [
+        {
+          "src": "/assets/imgs/production/blog-image.png",
+          "alt": "alt text"
+        },
+        {
+          "src": "/assets/imgs/production/image-2.jpg",
+          "alt": "alt text"
+        },
+        {
+          "src": "/assets/imgs/production/image-3.jpg",
+          "alt": "alt text"
+        }
+      ]
+    }
+  ],
+  "breadcrumbs": [
+    {
+      "link": "#",
+      "label": "Home"
+    },
+    {
+      "link": "#",
+      "label": "Get Started"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<article class="card {% if imgLeftCard.img.src %}card--img-left{% endif %} {% if imgLeftCard.backgroundColor %}card--reversed{% endif %}">
+  {% if imgLeftCard.url %}
+  <a class="card__link {% if imgLeftCard.border.position %}card--border-{{imgLeftCard.border.position}}{% endif %}" href="{{imgLeftCard.url}}" {% if imgLeftCard.backgroundColor or imgLeftCard.border.color %}style="{% if imgLeftCard.backgroundColor %}background-color: {{imgLeftCard.backgroundColor}};{% endif %}{% if imgLeftCard.border.color %}border-color: {{imgLeftCard.border.color}};{% endif %}"{% endif %}>
+  {% else %}
+  <span class="card__no-link {% if imgLeftCard.border.position %}card--border-{{imgLeftCard.border.position}}{% endif %}" {% if imgLeftCard.backgroundColor or imgLeftCard.border.color %}style="{% if imgLeftCard.backgroundColor %}background-color: {{imgLeftCard.backgroundColor}};{% endif %}{% if imgLeftCard.border.color %}border-color: {{imgLeftCard.border.color}};{% endif %}"{% endif %}>
+  {% endif %}
+    {% if imgLeftCard.img.src %}
+    <div class="card__image {% if imgLeftCard.mime == 'svg' %}card__image--svg{% endif %}" style="background-image: url('{{imgLeftCard.img.src}}'); {% if imgLeftCard.img.hex %}background-color: {{imgLeftCard.img.hex}};{% endif %}"></div>
+    {% endif %}
+    
+    <div class="card__content">
+      <div class="card__content-wrapper">
+        
+        {% if imgLeftCard.secondaryImg.position == 'top' %}
+        <img class="card__secondary-img" src="{{imgLeftCard.secondaryImg.src}}" alt="{{imgLeftCard.secondaryImg.alt}}">
+        {% endif %}
+      
+        {% if imgLeftCard.eyebrow %}
+        {% set eyebrow = imgLeftCard.eyebrow %}
+        {% include "eyebrow.twig" %}
+        {% endif %}
+        
+        <h3 class="card__title">{{imgLeftCard.title}}</h3>
+        
+        {% if imgLeftCard.eventDate or imgLeftCard.eventTime %}
+        <div class="card__meta">
+          {% if imgLeftCard.eventDate and imgLeftCard.eventTime %}
+            {{imgLeftCard.eventDate}}, {{imgLeftCard.eventTime}}
+          {% elseif imgLeftCard.eventDate %}
+            {{imgLeftCard.eventDate}}
+          {% else %}
+            {{imgLeftCard.eventTime}}
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if imgLeftCard.desc %}        
+        <div class="card__desc">
+          {{imgLeftCard.desc}}
+        </div>
+        {% endif %}
+
+        {% if imgLeftCard.cta.title %}
+          {% if imgLeftCard.cta.title %}
+            {% if imgLeftCard.cta.type == 'primary' %}
+            <span class="button button--small">{{imgLeftCard.cta.title}}</span>
+            {% elseif imgLeftCard.cta.type == 'tertiary' %}
+            <span class="button button--small button--tertiary">{{imgLeftCard.cta.title}}</span>
+            {% else %}
+            <span class="button button--small button--secondary">{{imgLeftCard.cta.title}}</span>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        
+        {% if imgLeftCard.secondaryImg.position == 'bottom' %}
+        <img class="card__secondary-img--bottom" src="{{imgLeftCard.secondaryImg.src}}" alt="{{imgLeftCard.secondaryImg.alt}}">
+        {% endif %}
+      </div>
+    </div>
+  {% if imgLeftCard.url %}
+  </a>
+  {% else %}
+  </span>
+  {% endif %}
+</article>

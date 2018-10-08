@@ -1,0 +1,147 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+{% extends '@templates/landing.twig' %}
+
+{% block landingHero %}
+  {% include "hero.twig" %}
+{% endblock %}
+
+{% block landingRail %}
+  {% if page.type == "top-level" %}
+  {% include "sidebar-nav--top-level.twig" %}
+  {% else %}
+  {% include "sidebar-nav.twig" %}
+  {% endif %}
+{% endblock %}
+
+{% block landingMainBody %}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <a href="#">Test Link</a> sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<h3>Our Resources</h3>
+{% for resource in resources %}
+  {% include "resource-embed.twig" %}
+{% endfor %}
+
+{% include "horizontal-rule.twig" %}
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+{% endblock %}
+
+{% block landingMainParagraphs %}
+{# Page section #}
+<section class="page-section page-section--light">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "full-cta.twig" %}
+      {% include "paragraph-horizontal-rule.twig" %}
+      {% include "image-w-text.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "section-header.twig" %}
+      {% set largeIconTeaser = largeIconTeaser1 %}
+      {% include "large-icon-teaser.twig" %}
+      {% set largeIconTeaser = largeIconTeaser2 %}
+      {% include "large-icon-teaser.twig" %}
+      {% set largeIconTeaser = largeIconTeaser3 %}
+      {% include "large-icon-teaser.twig" %}
+      {% set largeIconTeaser = largeIconTeaser4 %}
+      {% include "large-icon-teaser.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section page-section--dark">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "section-header.twig" %}
+      {% include "paragraph-horizontal-rule.twig" %}
+      {% include "card-group.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section page-section--light">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "section-header.twig" %}
+      {% include "card-group.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section page-section--dark">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "full-cta.twig" %}
+      {% include "image-w-text.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "icon-teaser-group.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "tab-group.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+  
+
