@@ -1,0 +1,11 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<fieldset id="{{id}}">
+  {% block fieldset %}
+    {% include '@atoms/04-forms/legend.twig' with {'text': 'Contact Information'} %}
+    {% include '@atoms/04-forms/label.twig' with {'text': 'E-Mail', 'for':"email-input"} %}
+    {% include '@atoms/04-forms/input-email.twig' with {'placeholder': 'text input', 'id':"email-input"} %}
+    {% include '@atoms/04-forms/label.twig' with {'text': 'Telephone', 'for':"tel"} %}
+    {% include '@atoms/04-forms/input-tel.twig' with {'id':"tel"} %}
+  {% endblock %}
+</fieldset>

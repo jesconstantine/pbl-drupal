@@ -1,0 +1,16 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.customer-summary-item {
+  padding: rhythm(.75);
+}
+
+.customer-summary-item__label {
+  @include adjust-font-size-to($label, .8);
+  margin: 0;
+  color: $blue-gray;
+}
+
+.customer-summary-item__value {
+  @include adjust-font-size-to($lg-heading, 1.35);
+  color: $blue-gray-dk;
+}

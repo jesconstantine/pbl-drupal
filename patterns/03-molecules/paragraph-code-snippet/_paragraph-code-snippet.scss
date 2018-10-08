@@ -1,0 +1,29 @@
+// @copyright Copyright (c) 2018 Palantir.net
+// imporant tags can be removed when we move this into drupal
+.code-snippet-container {
+  clear: both;
+  margin: $space-half 0 !important;
+
+  .prism-wrapper {
+    margin: 0;
+  }
+
+  pre {
+    padding: rhythm(.5) rhythm(1);
+    border-radius: 5px;
+    // can remove for drupal
+    background: $gray-lt !important;
+  }
+
+  .page-section--dark & {
+    h4 {
+      color: $white;
+    }
+  }
+
+  .page-section--light & {
+    pre {
+      background-color: $white !important;
+    }
+  }
+}

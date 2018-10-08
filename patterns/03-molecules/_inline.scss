@@ -1,0 +1,86 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.inline .align-left,
+.align-left {
+  display: block;
+  max-width: 100%;
+  margin: $space 0;
+  float: none;
+  
+  img {
+    display: inline-block;
+    max-width: 100%;
+    float: none;
+  }
+  
+  @include breakpoint($bp1) {
+    max-width: 50%;
+    float: left;
+    margin: $space-half $space-half $space-half 0;
+  }
+  
+  @include breakpoint($bp2) {
+    margin: $space-half $space $space-half 0;
+  }
+}
+
+.inline .align-right,
+.align-right {
+  display: block;
+  max-width: 100%;
+  margin: $space 0;
+  float: none;
+  
+  img {
+    display: inline-block;
+    max-width: 100%;
+    float: none;
+  }
+  
+  @include breakpoint($bp1) {
+    max-width: 50%;
+    float: right;
+    margin: $space-half 0 $space-half $space-half;
+  }
+  
+  @include breakpoint($bp2) {
+    margin: $space-half 0 $space-half $space;
+  }
+}
+
+.inline .align-center,
+.align-center {
+  display: block;
+  text-align: center;
+  max-width: 100%;
+  margin: $space auto;
+  float: none;
+  
+  img {
+    display: inline-block;
+    max-width: 100%;
+    float: none;
+  }
+}
+
+.inline .align-wp-center,
+.align-wp-center {
+  display: block;
+  width: auto;
+  margin: $space auto;
+  float: none;
+  text-align: center;
+  
+  img {
+    display: inline-block;
+    width: auto;
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+.inline-caption,
+figcaption {
+  @include adjust-font-size-to($label, .8);
+  margin-top: rhythm(.5);
+}

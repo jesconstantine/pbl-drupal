@@ -1,0 +1,7 @@
+{% if type == 'secondary' %}
+  {% set class = 'button button--secondary button--small' %}
+{% else %}
+  {% set class = 'button button--small' %}
+{% endif %}
+
+<a class="{{class}}" href="{{url}}">{{label}}</a>

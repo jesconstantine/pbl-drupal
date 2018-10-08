@@ -1,0 +1,7 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<div class="card-group">
+  {% for item in cardGroup %}
+    {% set card = item %}
+    {% include "card.twig" %}
+  {% endfor %}
+</div>

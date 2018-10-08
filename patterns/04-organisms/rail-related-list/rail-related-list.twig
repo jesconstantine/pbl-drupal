@@ -1,0 +1,9 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<div class="rail">
+  <h2 class="rail__title">You Might Like</h2>
+  <ul class="rail__list">
+    {% for teaser in teasers %}
+      <li>{% set railTeaser = teaser %}{% include "rail-teaser.twig" %}</li>
+    {% endfor %}
+  </ul>
+</div>

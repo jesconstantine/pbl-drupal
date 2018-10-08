@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "size": "default",
+    "title": null,
+    "desc": null,
+    "cta": {
+      "title": null,
+      "url": null
+    },
+    "featured_img": {
+      "src": null,
+      "alt": null
+    },
+    "backgroundColor": null,
+    "backgroundImg" : "/assets/imgs/production/blog-image.png"
+  }
+}

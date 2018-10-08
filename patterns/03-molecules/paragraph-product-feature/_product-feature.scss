@@ -1,0 +1,35 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.product-feature {
+  padding: rhythm(.5) 0;
+  clear: both;
+
+  .row {
+    align-items: center;
+  }
+}
+
+.product-feature h3 {
+  margin-top: rhythm(.2);
+  margin-bottom: rhythm(.2);
+
+  .page-section--dark & {
+    color: $white;
+  }
+}
+
+.page-section--dark .product-feature {
+  color: $white;
+}
+
+.product-feature--right {
+  .row {
+    flex-direction: row-reverse;
+  }
+}
+
+.product-feature__embed {
+  display: inline-block;
+  margin: rhythm(1) 0;
+  box-shadow: 0 -3px 20px rgba($black, .4);
+}

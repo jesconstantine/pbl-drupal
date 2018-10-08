@@ -1,0 +1,55 @@
+{
+  "blog": {
+    "title": "Build and Automate Actionable Threat Intelligence With Akamai and Splunk",
+    "authors": ["John Smith"],
+    "date": "2018-08-30T09:00:00+0000",
+    "featuredImg": {
+      "src": "/assets/imgs/production/blog-image.png",
+      "alt": "This is an image for the blog"
+    }
+  },
+  "teasers": [
+    {
+      "url": "#",
+      "title": "Automate the Promotion of Changes Between Different Environments"
+    },
+    {
+      "url": "#",
+      "title": "Build and Automate Actionable Threat Intelligence With Akamai and Splunk"
+    },
+    {
+      "url": "#",
+      "title": "Automate the Promotion of Changes Between Different Environments"
+    },
+    {
+      "url": "#",
+      "title": "Build and Automate Actionable Threat Intelligence With Akamai and Splunk"
+    }
+  ],
+  "subscribe": {
+    "title": "Subscribe",
+    "desc": "Enter your email address & we'll magically send you a notification whenever we've added a new blog post."
+  },
+  "tags": [
+    {
+      "url": "#",
+      "text": "DevOps"
+    },
+    {
+      "url": "#",
+      "text": "Web Performance"
+    },
+    {
+      "url": "#",
+      "text": "Monitoring"
+    },
+    {
+      "url": "#",
+      "text": "Mobile"
+    },
+    {
+      "url": "#",
+      "text": "Testing"
+    }
+  ]
+}

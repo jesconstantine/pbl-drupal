@@ -1,0 +1,126 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.page-nav--trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 0;
+  background-color: $gray-lt;  
+  border: 0;
+  padding: rhythm(.5) rhythm(1); 
+  color: $blue-gray;
+  
+  svg {
+    fill: $blue-gray;
+    height: 14px;
+    width: 14px;
+    transform: rotate(90deg);
+  }
+  
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: $blue-gray-dk;
+    color: $white;
+    transform: scale(1);
+    
+    svg {
+      fill: $white;
+    }
+  }
+  
+  &.is-active {
+    background-color: $blue-gray-dk;
+    color: $white;
+    
+    svg {
+      fill: $white;
+      transform: rotate(0deg); 
+    }
+  }
+  
+  @include breakpoint($bp3) {
+    display: none;
+  }
+}
+
+.page-nav {
+  display: none;
+  background-color: $gray-lt;
+  padding: rhythm(.5) 0;
+  margin: 0 0 rhythm(.75);
+  
+  @include breakpoint($bp3) {
+    display: block;
+    background-color: $white;
+    box-shadow: 0 0 25px rgba($black, .1);
+    padding: rhythm(1.5);
+    border-left: 6px solid $orange;
+  }
+}
+
+.page-nav__title {
+  display: none;
+
+  @include breakpoint($bp3) {
+    @include adjust-font-size-to($lg-heading, 1.35);
+    display: block;
+    margin-top: 0;
+  }
+}
+
+.page-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($bp3) {
+    columns: 2;
+  }
+}
+
+.page-nav__item-container {
+  display: flex;
+  align-content: stretch;
+
+  span {
+    display: block;
+    
+  }
+}
+
+.page-nav__item {
+  margin-bottom: 0;
+
+  @include breakpoint($bp3) {
+    margin-bottom: rhythm(.25);
+  }
+
+  a:link,
+  a:visited {
+    display: block;
+    width: 100%;
+    color: $blue-gray;
+    padding: rhythm(.5) rhythm(1);
+    text-decoration: none;
+
+    @include breakpoint($bp3) {
+      padding: 0;
+      display: inline-block;
+      width: auto;
+    }
+
+    &::before {
+      content: '-';
+      margin-right: .3em;
+    }
+  }
+  
+  a:active,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    background-color: $gray-lt;
+  }
+}

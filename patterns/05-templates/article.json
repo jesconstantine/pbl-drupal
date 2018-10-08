@@ -1,0 +1,25 @@
+{
+  "article": {
+    "hero": {
+      "size": "small",
+      "title": "Hero Title",
+      "desc": null,
+      "cta": {
+        "title": null,
+        "url": null
+      },
+      "featured_img": {
+        "src": "/assets/imgs/production/hero-image--small.png",
+        "alt": "Placeholder alt text"
+      } 
+    },
+    "grandparent": "Solutions",
+    "parent": "Browse by Category",
+    "name": "Overview",
+    "active": "Web Performance",
+    "eyebrow": "eyebrow_text",
+    "title": "Page Title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
+    "railNav": true,
+    "authors": ["John Smith", "Simone Henly", "Jeremy Fredrickson"]
+  }
+}

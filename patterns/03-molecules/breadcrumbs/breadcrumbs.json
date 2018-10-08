@@ -1,0 +1,20 @@
+{
+  "breadcrumbs": [
+    {
+      "link": "#",
+      "label": "Home"
+    },
+    {
+      "link": "#",
+      "label": "Solutions"
+    },
+    {
+      "link": null,
+      "label": "Browse By Category"
+    },
+    {
+      "link": "#",
+      "label": "Web Performance"
+    }
+  ]
+}

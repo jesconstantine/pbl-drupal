@@ -1,0 +1,65 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+{% extends '@templates/default.twig' %}
+
+{% block pageContent %}
+
+  {% block aricleHero %}
+    {% if article.hero %}
+      {# Articles can only have small heroes #}
+      {% set hero = article.hero %}
+      {% include "hero.twig" %}
+    {% endif %}
+  {% endblock %}
+
+
+  {% block articleContent %}
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+      {% include "breadcrumbs.twig" %}
+      </div>
+    </div>
+  </div>
+  <div class="page">
+    <div class="container">
+      <div class="row">
+        {% if article.railNav %}
+        <aside class="col-md-4 col-lg-3">
+          {% block articleRail %}
+            {% set page = article %}
+            {% include "sidebar-nav.twig" %}
+          {% endblock %}
+        </aside>
+        {% endif %}
+
+        {% block articleMain %}
+        <div class="col-md-8 col-lg-9">
+          <header>
+            {% if article.eyebrow %}
+            {% set eyebrow = article.eyebrow %}
+            {% include "eyebrow.twig" %}
+            {% endif %}
+            <h1 class="page__header">{{article.title}}</h1>
+            {% if article.authors %}
+            <div class="page__meta">
+              {% set authors = article.authors %}
+              {% include "authors.twig" %}
+            </div>
+            {% endif %}
+          </header>
+          <div class="page__body format_headers">
+            {% include "page-nav.twig" %}
+            {% block articleBody %}
+            <div class="sg-placeholder">Article Body Content</div>
+            {% endblock %}
+          </div>
+        </div>
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
+
+{% endblock %}
+

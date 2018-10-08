@@ -1,0 +1,9 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<optgroup label="{{label}}">
+  {% for option in options %}
+    {% set text = option.text %}
+    {% set value = option.value %}
+    {% include '@atoms/05-forms/option.twig' %}
+  {% endfor %}
+</optgroup>

@@ -1,0 +1,16 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+hr {
+  display: block;
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-color: $blue-gray;
+  margin: rhythm(1) 0;
+  
+  .page-section--dark & {
+    background-color: $white;
+  }
+}
+
+

@@ -1,0 +1,6 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<div id="{{tab.panelId}}" class="tab-window{% if tab.active %} is-active{% endif %}" aria-hidden="{% if tab.active %}false{% else %}true{% endif %}" role="tabpanel" aria-labelledby="{{tab.id}}" >
+  {% set imgText = tab %}
+  {% include "image-w-text.twig" %}
+</div>

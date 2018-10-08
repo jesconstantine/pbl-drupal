@@ -1,0 +1,59 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+%button,
+.button,
+button {
+  @include adjust-font-size-to(16px, .9);
+  padding: 8px 25px;
+  color: $white;
+  background-color: $orange;
+  border: 1px solid $orange;
+  border-radius: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform .5s ease;
+  
+  &:link,
+  &:visited {
+    color: $white;
+    text-decoration: none;
+    transition: transform .5s ease;
+  }
+  
+  &:active,
+  &:hover,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    transform: scale(1.1);
+    transition: transform .5s ease;
+  }
+}
+
+.button {
+  display: inline-block;
+}
+
+%button--secondary,
+button[type='reset'],
+.button--secondary {
+  color: $blue-gray;
+  background-color: transparent;
+  border: 1px solid $blue-gray;
+  
+  &:link,
+  &:visited {
+    color: $blue-gray;
+  }
+  
+  &:active,
+  &:hover,
+  &:focus {
+    color: $blue-gray;
+  }
+}
+
+.button--small {
+  @include adjust-font-size-to(14px, .9);
+  padding: 5px 15px;
+}

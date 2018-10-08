@@ -1,0 +1,25 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.inline-video {
+  margin: $space-half auto;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  float: none;
+}
+
+.inline-video-container {
+  @extend %clearfix;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+
+  iframe,
+  object{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

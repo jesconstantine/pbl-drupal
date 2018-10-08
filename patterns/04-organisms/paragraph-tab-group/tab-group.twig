@@ -1,0 +1,15 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<div class="tabs">
+  <div class="tab-links-container">
+    <ul class="tab-links" role="tablist">
+    {% for tab in tabs %}
+      {% include "tab-link.twig" %}
+    {% endfor %}
+    </ul>
+  </div>
+  <div class="tab-windows">
+  {% for tab in tabs %}
+    {% include "tab-window.twig" %}
+  {% endfor %}
+  </div>
+</div>

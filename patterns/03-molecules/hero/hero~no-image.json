@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "size": "default",
+    "title": "Akamai for DevOps",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.",
+    "cta": {
+      "title": "Learn More",
+      "url": "#"
+    },
+    "featured_img": null,
+    "backgroundColor": null,
+    "backgroundImg" : null
+  }
+}

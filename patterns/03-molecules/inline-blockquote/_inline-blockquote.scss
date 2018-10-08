@@ -1,0 +1,19 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+blockquote {
+  padding: 0;
+  color: $blue-gray-dk;
+  font-style: normal;
+  font-weight: 700;
+  margin: $space-half 0;
+  
+  p {
+    @include adjust-font-size-to($xl-heading, 1.5);
+    margin-bottom: 0;
+  }
+  
+  cite {
+    display: block;
+    margin-top: rhythm(.75);
+  }
+}

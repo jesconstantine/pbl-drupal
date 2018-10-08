@@ -1,0 +1,30 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.customer-summary {
+  margin: $space-half 0;
+  clear: both;
+}
+
+.customer-summary__header {
+  @include adjust-font-size-to($lg-heading, 1.35);
+  background-color: $orange;
+  color: $white;
+  margin: 0;
+  display: inline-block;
+  padding: rhythm(.25) rhythm(.5);
+}
+
+.customer-summary__inner {
+  border-top: 2px solid $orange;
+  box-shadow: 5px 5px 10px rgba($gray-dk, .3);
+  padding: $space-half;
+
+  @include breakpoint($bp2) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include breakpoint($bp3) {
+    flex-wrap: nowrap;
+  }
+}

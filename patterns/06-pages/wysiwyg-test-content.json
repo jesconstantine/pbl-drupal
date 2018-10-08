@@ -1,0 +1,41 @@
+{
+  "article": {
+    "hero": {
+      "size": "small",
+      "title": "WYSIWYG Test",
+      "desc": null,
+      "cta": {
+        "title": null,
+        "url": null
+      },
+      "featured_img": {
+        "src": "/assets/imgs/production/hero-image--small.png",
+        "alt": "Placeholder alt text"
+      } 
+    },
+    "grandparent": "Get Started",
+    "parent": "Browse Get Started",
+    "name": "Setup Your Environment",
+    "active": "Get Started with Akamai APIs",
+    "eyebrow": "Akamai APIs",
+    "railNav": true
+  },
+  "breadcrumbs": [
+    {
+      "link": "#",
+      "label": "Home"
+    },
+    {
+      "link": "#",
+      "label": "Test"
+    },
+    {
+      "link": null,
+      "label": "Breadcrumbs"
+    },
+    {
+      "link": "#",
+      "label": "WYSIWYG Test Content"
+    }
+  ]
+}

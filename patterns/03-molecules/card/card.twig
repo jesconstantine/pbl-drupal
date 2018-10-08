@@ -1,0 +1,61 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<article class="card {% if card.backgroundColor %}card--reversed{% endif %}" >
+  {% if card.url %}
+  <a class="card__link {% if card.cta.title == null %}card__link--no-cta{% endif %} {% if card.border.position %}card--border-{{card.border.position}}{% endif %}" href="{{card.url}}" {% if card.backgroundColor or card.border.color %}style="{% if card.backgroundColor %}background-color: {{card.backgroundColor}};{% endif %}{% if card.border.color %}border-color: {{card.border.color}};{% endif %}"{% endif %}>
+  {% else %}
+  <span class="card__no-link {% if card.border.position %}card--border-{{card.border.position}}{% endif %}" {% if card.backgroundColor or card.border.color %}style="{% if card.backgroundColor %}background-color: {{card.backgroundColor}};{% endif %}{% if card.border.color %}border-color: {{card.border.color}};{% endif %}"{% endif %}>
+  {% endif %}
+    {% if card.img.src %}
+    <div class="card__image {% if card.mime == 'svg' %}card__image--svg{% endif %}" style="background-image: url('{{card.img.src}}'); {% if card.img.hex %}background-color: {{card.img.hex}};{% endif %}"></div>
+    {% endif %}
+    
+    <div class="card__content">
+      
+      {% if card.secondaryImg.position == 'top' %}
+        <img class="card__secondary-img" src="{{card.secondaryImg.src}}" alt="{{card.secondaryImg.alt}}">
+      {% endif %}
+      
+      {% if card.eyebrow %}
+      {% set eyebrow = card.eyebrow %}
+      {% include "eyebrow.twig" %}
+      {% endif %}
+      
+      <h3 class="card__title">{{card.title}}</h3>
+      
+      {% if card.eventDate or card.eventTime %}
+      <div class="card__meta">
+        {% if card.eventDate and card.eventTime %}
+          {{card.eventDate}}, {{card.eventTime}}
+        {% elseif card.eventDate %}
+          {{card.eventDate}}
+        {% else %}
+          {{card.eventTime}}
+        {% endif %}
+      </div>
+      {% endif %}
+      {% if card.desc %}        
+      <div class="card__desc">
+        {{card.desc}}
+      </div>
+      {% endif %}
+      
+      {% if card.cta.title %}
+        {% if card.cta.type == 'primary' %}
+        <span class="button button--small">{{card.cta.title}}</span>
+        {% elseif card.cta.type == 'tertiary' %}
+        <span class="button button--small button--tertiary">{{card.cta.title}}</span>
+        {% else %}
+        <span class="button button--small button--secondary">{{card.cta.title}}</span>
+        {% endif %}
+      {% endif %}
+      
+      {% if card.secondaryImg.position == 'bottom' %}
+        <img class="card__secondary-img--bottom" src="{{card.secondaryImg.src}}" alt="{{card.secondaryImg.alt}}">
+      {% endif %}
+    </div>
+  {% if card.url %}
+  </a>
+  {% else %}
+  </span>
+  {% endif %}
+</article>

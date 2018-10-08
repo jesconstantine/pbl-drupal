@@ -1,0 +1,14 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+{% set class = orientation ? 'align-'~orientation : 'align-left' %}
+
+<blockquote class="{{class}}">
+  {# Don't add the p tag to the template, Drupal force places one here. #}
+  <p>
+  &ldquo;{{quote}}&rdquo;
+
+  {% if cite %}
+    <cite>&mdash; {{cite}}</cite>
+  {% endif %}
+  </p>
+</blockquote>

@@ -1,0 +1,13 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<form id="{{id}}" name="{{name}}" action="{{action}}" method="{{method}}">
+  {% block form %}
+    {% include '@atoms/04-forms/label.twig' with {'text': 'First Name', 'for':"text-input-1"} %}
+    {% include '@atoms/04-forms/input-text.twig' with {'placeholder': 'text input', 'id':"text-input-1"} %}
+    {% include '@atoms/04-forms/label.twig' with {'text': 'Last Name', 'for':"text-input-2"} %}
+    {% include '@atoms/04-forms/input-text.twig' with {'placeholder': 'text input', 'id':"text-input-2"} %}
+    {% include '@atoms/04-forms/fieldset.twig' with {'placeholder': 'text input', 'id':"text-input-2"} %}
+    {% include '@atoms/04-forms/input-submit.twig' with {'id':"submit", "value":"submit"} %}
+    {% include '@atoms/04-forms/input-reset.twig' with {'id':"reset", "value":"reset"} %}
+  {% endblock %}
+</form>

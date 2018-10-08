@@ -1,0 +1,62 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  max-width: 100%;
+  margin-bottom: $space;
+  border-collapse: collapse;
+  text-align: left;
+  vertical-align: top;
+}
+
+caption,
+th,
+td {
+  padding: 1rem;
+  border: 1px solid darken($gray-lt, 10%);
+  vertical-align: top;
+  
+  .table--transparent & {
+    padding: 1rem 1.5rem 1rem 0;
+    border-color: transparent;
+  }
+
+  @include breakpoint($bp3) {
+    padding: rhythm(.75) 2rem;
+    
+    .table--transparent & {
+      padding: rhythm(.75) 2.5rem rhythm(.75) 0;
+    }
+  }
+}
+
+caption {
+  @include adjust-font-size-to($lg-heading, 1.35);
+  text-align: left;
+  border-bottom: 2px solid darken($gray-lt, 10%);
+  
+  .table--transparent & {
+    border-color: transparent;
+  }
+}
+
+tr {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+th {
+  @include adjust-font-size-to($text, 1);
+}
+
+tfoot {
+  font-weight: 500;
+  border-top: 3px solid darken($gray-lt, 10%);
+  background-color: $white;
+  
+  .table--transparent & {
+    border-color: transparent;
+  }
+}
+

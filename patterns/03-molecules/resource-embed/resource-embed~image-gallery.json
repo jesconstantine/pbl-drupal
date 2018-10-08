@@ -1,0 +1,27 @@
+{
+  "resource": {
+    "type": "imageGallery",
+    "url": null,
+    "id": "resource-1",
+    "title": "Hands-on Lab Gallery",
+    "desc": "The hands-on labs were one of the most popular features of the Developer Zone, so we've made the lab and materials available here.",
+    "cta": "View Gallery",
+    "img": {
+      "src": "/assets/imgs/production/teaser-img.png"
+    },
+    "media": [
+      {
+        "src": "/assets/imgs/production/image-1.jpg",
+        "alt": "alt text"
+      },
+      {
+        "src": "/assets/imgs/production/image-2.jpg",
+        "alt": "alt text"
+      },
+      {
+        "src": "/assets/imgs/production/image-3.jpg",
+        "alt": "alt text"
+      }
+    ]
+  }
+}

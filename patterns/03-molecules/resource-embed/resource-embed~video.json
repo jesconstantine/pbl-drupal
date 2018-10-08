@@ -1,0 +1,18 @@
+{
+  "resource": {
+    "type": "video",
+    "url": null,
+    "id": "resource-1",
+    "title": "Hands-on Lab Video",
+    "desc": "The hands-on labs were one of the most popular features of the Developer Zone, so we've made the lab and materials available here.",
+    "cta": "Watch the Video",
+    "img": {
+      "src": "/assets/imgs/production/teaser-img.png"
+    },
+    "media": [
+      {
+        "src": "https://www.youtube.com/embed/NpEaa2P7qZI"
+      }
+    ]
+  }
+}

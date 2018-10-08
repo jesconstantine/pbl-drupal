@@ -1,0 +1,8 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<li class="tab-link {% if tab.active %}is-active{% endif %}" role="tab">
+  <button type="button" id="{{ tab.tabId }}" data-id="{{tab.panelId}}" aria-controls="{{tab.panelId}}" role="tab" aria-selected="{% if tab.active %}true{% else %}false{% endif %}">
+    {% include "icon-circle.twig" %}
+    <span class="tab-link__label">{{ tab.label }}</span>
+  </button>
+</li>

@@ -1,0 +1,11 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<article class="icon-teaser">
+  {% if iconTeaser.link.url %}<a href="{{ iconTeaser.link.url }}">{% endif %}
+  {% set icon = iconTeaser %}
+  {% include "icon-circle.twig" %}
+  <h3 class="icon-teaser__title">{{ iconTeaser.title }}</h3>
+  {% if iconTeaser.link.title %}
+    <span class="icon-teaser__cta">{{iconTeaser.link.title}}</span>
+  {% endif %}
+  {% if iconTeaser.link.url %}</a>{% endif %}
+</article>

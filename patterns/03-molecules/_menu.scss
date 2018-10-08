@@ -1,0 +1,514 @@
+// @copyright Copyright (c) 2018 Palantir.net
+.menu-overlay {
+  display: none;
+  background-color: rgba($gray-dk, .5);
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 500;
+  transition: top 0s .3s linear;
+  
+  @include breakpoint($nav-breakpoint) {
+    position: absolute;
+    top: 80px;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+  }
+  
+  &.is-active--search {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 500;
+
+    @include breakpoint($nav-breakpoint) {
+      position: absolute;
+      top: 80px;
+      right: auto;
+      left: auto;
+      bottom: auto;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 90%;
+  background-color: $white;
+  box-shadow: 5px 5px 10px rgba($gray-dk, .3);
+  visibility: hidden;
+  overflow-y: scroll;
+  transition: left .3s ease, visibility 0s .3s ease;
+  z-index: 600;
+  padding-bottom: rhythm(1);
+  
+  a:link,
+  a:visited {
+    color: $blue-gray;
+    text-decoration: none;
+  }
+  
+  a:active,
+  a:hover,
+  a:focus {
+    background-color: $gray-lt;
+    text-decoration: none;
+  }
+  
+  &.is-active {
+    visibility: visible;
+    left: 0;
+    transition: left .3s ease, visibility 0s 0s ease;
+    z-index: 700;
+  }
+  
+  @include breakpoint($bp1) {
+    width: 70%;
+  }
+  
+  @include breakpoint($bp3) {
+    width: 40%;
+  }
+  
+  @include breakpoint($nav-breakpoint) {
+    position: static;
+    visibility: visible;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+    min-height: 0;
+    overflow-y: visible;
+    padding-bottom: 0;
+    transition: none;
+    
+    a:active,
+    a:hover,
+    a:focus {
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  @include breakpoint($nav-breakpoint) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+  }
+}
+
+.menu-trigger--close {
+  margin: rhythm(.5) 0 rhythm(.5) rhythm(.5);
+  padding: rhythm(.5);
+  background-color: transparent;
+  border-color: transparent;
+  
+  svg {
+    fill: $blue-gray;
+    height: 30px;
+    width: 30px;
+  }
+  
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0;
+    transform: scale(1);
+    
+    svg {
+      fill: $orange;
+    }
+  }
+  
+  @include breakpoint($nav-breakpoint) {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.menu-item {
+  margin-bottom: 0;
+  
+  @include breakpoint($nav-breakpoint) {
+    display: flex;
+    flex-basis: 1;
+    flex-grow: 1;
+    margin-right: rhythm(.15);
+    position: relative;
+    
+    &:nth-of-type(1),
+    &:nth-of-type(4) {
+      position: static;
+    }
+    
+    &:hover {
+      background-color: $white;
+      box-shadow: 0 0 5px rgba($gray-dk, .25);
+    }
+    
+    &.is-active {
+      background-color: $white;
+      box-shadow: 0 0 5px rgba($gray-dk, .25);
+    }
+  }
+  
+  @include breakpoint(1200px) {
+    margin-right: rhythm(.5);
+  }
+}
+
+.menu-item__container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  
+  @include breakpoint($nav-breakpoint) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+  }
+}
+
+.menu-trigger--secondary {
+  @include adjust-font-size-to(15px, .8);
+  padding: rhythm(.25) rhythm(.25) rhythm(.25) rhythm(1);
+  background-color: transparent;
+  border-color: transparent;
+  color: $blue-gray;
+  font-weight: 700;
+  
+  svg {
+    fill: $blue-gray;
+    height: 10px;
+    width: 10px;
+    transition: transform .25s ease;
+  }
+  
+  &:active,
+  &:hover,
+  &:focus {
+    color: $blue-gray;
+    background-color: $gray-lt;
+    border-color: transparent;
+    border-radius: 0;
+    transform: scale(1);
+  }
+  
+  .menu-item.is-active & {
+    svg {
+      transform: rotate(90deg);
+      transition: transform .25s ease;
+    }
+  }
+  
+  @include breakpoint($nav-breakpoint) {
+    display: inline-block;
+    padding: 0 rhythm(.75) rhythm(.5);
+    
+    svg {
+      transform: rotate(90deg);
+    }
+    
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: transparent;
+      border-radius: 0;
+      
+      svg {
+        fill: $orange;
+      }
+    }
+  }
+}
+
+.menu-trigger--no-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: rhythm(.5) rhythm(1);
+  
+  svg {
+    order: 1;
+    margin-right: 12px;
+  }
+  
+  span {
+    order: 2;
+  }
+  
+  @include breakpoint($bp3) {
+    &:active,
+    &:hover,
+    &:focus {
+      color: $orange;
+    }
+  }
+  
+  @include breakpoint($nav-breakpoint) {
+    display: block;
+    text-align: center;
+    padding: rhythm(1.5) rhythm(.35) rhythm(.75);
+    
+    svg {
+      display: block;
+      margin: 4px auto 0;
+    }
+  }
+}
+
+.menu-item__link {
+  @include adjust-font-size-to(15px, .8);
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: rhythm(.5) 45px;
+  
+  .menu-item--w-child & {
+    padding: rhythm(.5) 0 rhythm(.5) rhythm(.15);
+  }
+  
+  @include breakpoint($nav-breakpoint) {
+    display: inline-block;
+    padding: rhythm(1.5) rhythm(.35);
+    
+    .menu-item--w-child & {
+      padding: rhythm(1.5) rhythm(.35) 0;
+    }
+    
+    .menu &:active,
+    .menu &:hover,
+    .menu &:focus {
+      color: $orange;
+    }
+  }
+  
+  @include breakpoint(1200px) {
+    padding: rhythm(1.5) rhythm(.75);
+    
+    .menu-item--w-child & {
+      padding: rhythm(1.5) rhythm(.75) 0;
+    }
+  }
+}
+
+.menu-item__children {
+  @include adjust-font-size-to(15px, 1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: visibility 0s .15s ease-out, max-height .15s ease-out;
+  z-index: 600;
+  
+  .menu-item.is-active & {
+    max-height: 1000px;
+    visibility: visible;
+    transition: visibility 0s .25s ease-in, max-height .75s .15s ease-in;
+  }
+  
+  @include breakpoint($nav-breakpoint) {
+    position: absolute;
+    top: 100%;
+    width: 300px;
+    box-shadow: 0 5px 5px rgba($gray-dk, .25);
+    background-color: $white;
+    display: flex;
+    transition: visibility 0s .15s ease-out, max-height .15s ease-out;
+    
+    .menu-item.is-active & {
+      max-height: 1000px;
+      visibility: visible;
+      transition: visibility 0s .25s ease-in, max-height .5s .15s ease-in;
+    }
+    
+    .menu-item:nth-of-type(1) &,
+    .menu-item:nth-of-type(4) & {
+      left: 0;
+      right: 0;
+      width: auto;
+      margin: 0 rhythm(1);
+    }
+    
+    .menu-item:nth-of-type(5) &,
+    .menu-item:nth-of-type(6) &,
+    .menu-item:nth-of-type(7) &,
+    .menu-item:nth-of-type(8) & {
+      right: 0;
+    }
+  }
+  
+  @include breakpoint(1400px) {
+    .menu-item:nth-of-type(5) & {
+      right: auto;
+    }
+  }
+  
+  @include breakpoint(2000px) {
+    .menu-item:nth-of-type(6) & {
+      right: auto;
+    }
+  }
+  
+  @include breakpoint(2250px) {
+    .menu-item:nth-of-type(7) & {
+      right: auto;
+    }
+  }
+  
+  @include breakpoint(2500px) {
+    .menu-item:nth-of-type(8) & {
+      right: auto;
+    }
+  }
+}
+
+.menu-item__child-group {
+  
+  @include breakpoint($nav-breakpoint) {
+    padding: rhythm(1.25) rhythm(1.75) rhythm(2.5);
+    width: 100%;
+    
+    .menu-item:nth-of-type(1) & {
+      &:nth-of-type(1) { 
+        max-width: 30%;
+        flex-basis: 1 1 30%;
+      }
+      
+      &:nth-of-type(2) { 
+        min-width: 600px;
+        flex-basis: 1 1 70%;
+        
+        .menu-item__child-container {
+          column-count: 3;
+        }
+      }
+    }
+    
+    .menu-item:nth-of-type(4) & {
+      flex-basis: 1 1 30%;
+      width: 33%;
+    }
+  }
+  
+  @include breakpoint(1200px) {
+    .menu-item:nth-of-type(1) & {
+      &:nth-of-type(1) { 
+        max-width: 25%;
+        flex-basis: 1 1 25%;
+      }
+      
+      &:nth-of-type(2) { 
+        min-width: 800px;
+        flex-basis: 1 1 75%;
+        
+        .menu-item__child-container {
+          column-count: 4;
+        }
+      }
+    }
+  }
+}
+
+.menu-item__label {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $gray-dk;
+  border-bottom: 2px solid $orange;
+  margin: 10px 0;
+  margin-left: rhythm(2.5);
+  
+  a:link,
+  a:visited {
+    color: $gray-dk;
+    text-decoration: none;
+  }
+  
+  a:active,
+  a:hover,
+  a:focus {
+    color: $orange;
+    background-color: transparent;
+  }
+  
+  @include breakpoint($nav-breakpoint) {
+    margin: 10px rhythm(1);
+  }
+}
+
+.menu-item__child-container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    @include adjust-leading-to(1);
+    break-inside: avoid;
+  }
+}
+
+.menu-item__child-link {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: rhythm(.25) 0 rhythm(.25) rhythm(2.5);
+  
+  &:before {
+    content: '- ';
+    display: inline;  
+  }
+  
+  @include breakpoint($nav-breakpoint) {
+    text-transform: none;
+    padding: rhythm(.15) rhythm(1);
+    margin-bottom: rhythm(.25);
+    
+    &:before {
+      content: '';
+      display: none;  
+    }
+    
+    .menu &:active,
+    .menu &:hover,
+    .menu &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+// For overlay when menu is open 
+
+#body.is-active {
+  &:after {
+    background-color: rgba($black, .5);
+  }
+}

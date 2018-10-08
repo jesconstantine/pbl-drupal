@@ -1,0 +1,24 @@
+{
+  "imgText": {
+    "alignment": "default",
+    "eyebrow": "Eyebrow Text",
+    "title": "Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+    "cta1": {
+      "url": "#",
+      "title": "Call to Action"
+    },
+    "cta2": {
+      "url": "#",
+      "title": "Call to Action 2"
+    },
+    "cta3": {
+      "url": "#",
+      "title": "Call to Action 3"
+    },
+    "img": {
+      "src": "/assets/imgs/production/test-image.png",
+      "alt": "Placeholder alt text"
+    }
+  }
+}

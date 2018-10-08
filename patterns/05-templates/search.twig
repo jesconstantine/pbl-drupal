@@ -1,0 +1,35 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+{% extends '@templates/default.twig' %}
+
+{% block pageContent %}
+  
+  {% block searchHero %}
+    <header class="hero hero--search">
+      <div class="container hero-texture">
+        <div class="row hero-row">
+          <div class="hero-block">
+            <h1 class="hero__title">Search Results</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+  {% endblock %}
+  
+  {% block searchContent %}
+  <div class="container">
+    <div class="row justify-content-md-end">
+      <div class="col">
+        {% block searchForm %}
+        {% include "search-results-form.twig" %}
+        {% endblock %}
+        {% block searchResults %}
+          <div class="sg-placeholder">Landing Body Content</div>
+        {% endblock %}
+        
+      </div>
+    </div>
+  </div>
+    
+  {% endblock %}
+
+{% endblock %}

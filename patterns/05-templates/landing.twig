@@ -1,0 +1,60 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+{% extends '@templates/default.twig' %}
+
+{% block pageContent %}
+
+  {% block landingHero %}
+    <div class="sg-placeholder">Landing Hero</div>
+  {% endblock %}
+
+  {% block landingContent %}
+  {% if breadcrumbs %}
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+      {% include "breadcrumbs.twig" %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  <div {% if landingRail == 'true' %}class="landing--w-rail"{% endif %}>
+    {% if landingRail == 'true' %}
+    <div class="container landing__rail">
+      <div class="row">
+        <aside class="col-md-4 col-lg-3">
+          {% block landingRail %}
+          <div class="sg-placeholder">Landing Rail (sidebar)</div>
+          {% endblock %}
+        </aside>
+      </div>
+    </div>
+    {% endif %}
+
+    {% block landingMain %}
+      <div class="container">
+        <div class="row justify-content-md-end">
+          {% if landingRail == 'true' %}
+            <div class="col-md-8 col-lg-9">
+          {% else %}
+            <div class="col">
+          {% endif %}
+          {% if landingBody == 'true'  %}
+            <div class="landing__body format_headers">
+            {% block landingMainBody %}
+              <div class="sg-placeholder">Landing Body Content</div>
+            {% endblock %}
+            </div>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+      {% block landingMainParagraphs %}
+      <div class="sg-placeholder">Landing Paragraphs Content</div>
+      {% endblock %}
+    {% endblock %}
+  </div>
+
+
+  {% endblock %}
+
+{% endblock %}

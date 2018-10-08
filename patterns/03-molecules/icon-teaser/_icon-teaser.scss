@@ -1,0 +1,81 @@
+// @copyright Copyright (c) 2018 Palantir.net
+.icon-teaser {
+  text-align: center;
+  margin: rhythm(.5) 0 rhythm(.75);
+  
+  .icon-circle {
+    margin: 0 auto;
+  }
+  
+  a {
+    display: block;
+    cursor: pointer;
+    
+    .page-section--dark & {
+      color: $white;
+    }
+  }
+  
+  a:link,
+  a:visited {
+    text-decoration: none;
+    
+    .icon-teaser__cta {
+      color: $blue;
+    }
+    
+    .page-section--dark & .icon-teaser__cta{
+      color: $blue-lt;
+      
+      &::after {
+        background-image: url('../imgs/production/chevron-small-right-lt-blue.svg');
+      }
+    }
+  }
+  
+  a:active,
+  a:hover,
+  a:focus {
+    transform: scale(1.1);
+    text-decoration: none;
+    transition: transform .5s ease;
+    
+    .icon-teaser__cta {
+      color: $blue;
+    }
+  }
+  
+  @include breakpoint($bp2) {
+    padding: 0 rhythm(.5);
+  }
+}
+
+.icon-teaser__title {
+  @include adjust-font-size-to($h4-font-size, 1);
+  margin-top: rhythm(.25);
+  margin-bottom: 0;
+  
+  .page-section--dark & {
+    color: $white;
+  }
+
+  @include breakpoint($bp3) {
+    @include adjust-font-size-to($h3-font-size, 1.35);
+  }
+}
+
+.icon-teaser__cta {
+  @include adjust-font-size-to($label, .8);
+  display: inline-block;
+  text-transform: uppercase;
+  
+  &::after {
+    content: '';
+    background-image: url('../imgs/production/chevron-small-right.svg');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: .5em;
+    height: .7em;
+    margin-left: .4em;
+  }
+}

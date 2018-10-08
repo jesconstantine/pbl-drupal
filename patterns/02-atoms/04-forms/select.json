@@ -1,0 +1,17 @@
+{
+  "id": "select",
+  "options": [
+    {
+      "text": "option 1",
+      "value": "option1"
+    },
+    {
+      "text": "option 2",
+      "value": "option2"
+    },
+    {
+      "text": "option 3",
+      "value": "option3"
+    }
+  ]
+}

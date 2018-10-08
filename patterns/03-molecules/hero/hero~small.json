@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "size": "small",
+    "title": "Getting Started",
+    "desc": null,
+    "cta": {
+      "title": null,
+      "url": null
+    },
+    "featured_img": {
+      "src": "https://placeimg.com/900/300/an",
+      "alt": "Placeholder alt text"
+    } 
+  }
+}

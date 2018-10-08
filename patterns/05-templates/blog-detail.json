@@ -1,0 +1,55 @@
+{
+  "blog": {
+    "title": "Blog Title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
+    "authors": ["John Smith", "Simone Henly", "Jeremy Fredrickson"],
+    "date": "2016-04-12T15:52:01+0000",
+    "featuredImg": {
+      "src": "/assets/imgs/production/blog-image.png",
+      "alt": "Blog Featured Image Alt Text"
+    }
+  },
+  "teasers": [
+    {
+      "url": "#",
+      "title": "Teaser title one Lorem ipsum Dolor Set"
+    },
+    {
+      "url": "#",
+      "title": "Teaser title two Lorem ipsum Dolor Set"
+    },
+    {
+      "url": "#",
+      "title": "Teaser title three Lorem ipsum Dolor Set"
+    },
+    {
+      "url": "#",
+      "title": "Teaser title four Lorem ipsum Dolor Set"
+    }
+  ],
+  "subscribe": {
+    "title": "Subscribe",
+    "desc": "Enter your email address & we'll magically send you a notification whenever we've added a new blog post."
+  },
+  "tags": [
+    {
+      "url": "#",
+      "text": "Topic Tag 1"
+    },
+    {
+      "url": "#",
+      "text": "Topic Tag 2"
+    },
+    {
+      "url": "#",
+      "text": "Topic Tag 3"
+    },
+    {
+      "url": "#",
+      "text": "Topic Tag 4"
+    },
+    {
+      "url": "#",
+      "text": "Topic Tag 5"
+    }
+  ]
+}

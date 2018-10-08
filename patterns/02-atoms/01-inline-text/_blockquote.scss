@@ -1,0 +1,11 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+blockquote {
+  color: $blue-gray-dk;
+  font-style: normal;
+
+  + cite {
+    color: $blue-gray-dk;
+    font-style: normal;
+  }
+}

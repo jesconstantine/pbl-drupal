@@ -1,0 +1,31 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<article class="large-icon-teaser">
+
+  {% set icon = largeIconTeaser %}
+  {% include "icon-circle.twig" %}
+
+  <div class="large-icon-teaser__block">
+    <h3 class="icon-teaser__title">{{ largeIconTeaser.title }}</h3>
+    {% if largeIconTeaser.desc %}
+    <div class="icon-teaser__desc inline">
+      {{ largeIconTeaser.desc }}
+    </div>
+    {% endif %}
+    {% if largeIconTeaser.primary_link %}
+      {% set url = largeIconTeaser.primary_link.url %}
+      {% set label = largeIconTeaser.primary_link.title %}
+      {% include "inline-button-link.twig" %}
+    {% endif %}
+    {% if largeIconTeaser.secondary_link %}
+      {% set url = largeIconTeaser.secondary_link.url %}
+      {% set label = largeIconTeaser.secondary_link.title %}
+      {% include "inline-button-link.twig" with {"type": "secondary"}  %}
+    {% endif %}
+    {% if largeIconTeaser.tertiary_link %}
+      {% set url = largeIconTeaser.tertiary_link.url %}
+      {% set label = largeIconTeaser.tertiary_link.title %}
+      {% include "inline-button-link.twig" with {"type": "tertiary"}  %}
+    {% endif %}
+  </div>
+
+</article>

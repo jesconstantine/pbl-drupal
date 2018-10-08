@@ -1,0 +1,34 @@
+// @copyright Copyright (c) 2018 Palantir.net
+.tabs {
+  @extend %clearfix;
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
+.tab-links-container {
+  overflow-x: scroll;
+  overflow-y: visible;
+  
+  @include breakpoint($bp4) {
+    overflow: visible;
+    
+    .landing--w-rail & {
+      overflow-x: scroll;
+    }
+  }
+  
+  @include breakpoint($bp5) {
+    .landing--w-rail & {
+      overflow-x: visible;
+    }
+  }
+}
+
+.tab-links {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid $gray-lt;
+  margin: 0 0 15px 0;
+  padding: 0;
+}

@@ -1,0 +1,6 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+{% for item in customerSummary.items %}
+  {% set customerSummaryItem = item %}
+  {% include "customer-summary-item.twig" %}
+{% endfor %}

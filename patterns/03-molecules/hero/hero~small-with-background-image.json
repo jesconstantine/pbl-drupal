@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "size": "small",
+    "title": "DevOps",
+    "desc": null,
+    "cta": {
+      "title": null,
+      "url": null
+    },
+    "featured_img": null,
+    "backgroundColor": null,
+    "backgroundImg" : "/assets/imgs/production/blog-image.png"
+  }
+}

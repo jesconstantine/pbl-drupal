@@ -1,0 +1,96 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+{% extends '@templates/landing.twig' %}
+
+{% block landingHero %}
+  {% include "hero.twig" %}
+{% endblock %}
+
+{% block landingRail %}
+  <div class="sg-placeholder">Homepage Rail (sidebar)</div>
+{% endblock %}
+
+{% block landingMainBody %}
+<div class="sg-placeholder">Landing Body Content</div>
+{% endblock %}
+
+{% block landingMainParagraphs %}
+  
+{# Page section #}
+<section class="page-section page-section--light">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "full-cta.twig" %}
+      {% include "image-w-text.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section page-section--dark">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "section-header.twig" %}
+      {% include "card-group.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section page-section--light">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "section-header.twig" %}
+      {% include "card-group--resource.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section page-section--dark">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "full-cta.twig" %}
+      {% include "image-w-text.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "icon-teaser-group.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Page section #}
+<section class="page-section">
+  <div class="container">
+    <div class="row">
+      <div class="section-col">
+      {# Page section Paragraphs #}
+      {% include "tab-group.twig" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+  
+

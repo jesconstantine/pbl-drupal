@@ -1,0 +1,110 @@
+{
+  "tabs": [
+    {
+      "tabId": "tab-1",
+      "panelId": "panel-1",
+      "icon": "icon placeholder",
+      "label": "Mobile App Performance",
+      "active": "true",
+      "alignment": "default",
+      "eyebrow": "Eyebrow Text",
+      "title": "Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Call to Action"
+      },
+      "img": {
+        "src": "/assets/imgs/production/hero-image--home.png",
+        "alt": "Placeholder alt text"
+      }
+    },
+    {
+      "tabId": "tab-2",
+      "panelId": "panel-2",
+      "icon": "icon placeholder",
+      "label": "HTTPIE",
+      "alignment": "default",
+      "eyebrow": "Eyebrow Text",
+      "title": "Tab 2 Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Call to Action"
+      },
+      "img": {
+        "src": "/assets/imgs/production/hero-image--home.png",
+        "alt": "Placeholder alt text"
+      }
+    },
+    {
+      "tabId": "tab-3",
+      "panelId": "panel-3",
+      "icon": "icon placeholder",
+      "label": "Media Acceleration",
+      "alignment": "default",
+      "eyebrow": "Eyebrow Text",
+      "title": " Tab 3 Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Call to Action"
+      },
+      "img": null
+    },
+    {
+      "tabId": "tab-4",
+      "panelId": "panel-4",
+      "icon": "icon placeholder",
+      "label": "Bot Manager",
+      "alignment": "default",
+      "eyebrow": "Eyebrow Text",
+      "title": "Tab 4 Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Call to Action"
+      },
+      "img": {
+        "src": "/assets/imgs/production/hero-image--home.png",
+        "alt": "Placeholder alt text"
+      }
+    },
+    {
+      "tabId": "tab-5",
+      "panelId": "panel-5",
+      "icon": "icon placeholder",
+      "label": "Adaptive Media Player",
+      "alignment": "default",
+      "eyebrow": "Eyebrow Text",
+      "title": "Tab 5 Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Call to Action"
+      },
+      "img": {
+        "src": "/assets/imgs/production/hero-image--home.png",
+        "alt": "Placeholder alt text"
+      }
+    },
+    {
+      "tabId": "tab-6",
+      "panelId": "panel-6",
+      "icon": "icon placeholder",
+      "label": "SIEM",
+      "alignment": "default",
+      "eyebrow": "Eyebrow Text",
+      "title": "Tab 6 Lorem ipsum dolor sit amet, consectetur elit sed do eiusmod tempor",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "cta": {
+        "url": "#",
+        "title": "Call to Action"
+      },
+      "img": {
+        "src": "/assets/imgs/production/hero-image--home.png",
+        "alt": "Placeholder alt text"
+      }
+    }
+  ]
+}

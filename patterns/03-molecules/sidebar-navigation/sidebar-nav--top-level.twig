@@ -1,0 +1,57 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+<div class="sidebar">
+  <button type="button" id="sidebar-nav--trigger" class="sidebar-nav--trigger">
+    In this section {% include "wedge.svg" %}
+  </button>
+  <nav id="sidebar-nav" class="sidebar-nav">
+    <ul class="sidebar-nav__list">
+      {% for item in menu_items %}
+      {% if item.label == page.grandparent %}
+      {% if item.child_groups %}
+        {% for item in item.child_groups %}
+        {% if item.items %}
+        <li class="sidebar-nav__parent {% if item.label == page.active %}is-active{% endif %}">
+          <div class="sidebar-nav__parent-container">
+          {% if loop.length > 1 %}
+            <button type="button" class="sidebar-nav__parent-trigger sidebar-nav__parent-trigger--no-link" title="Open Menu">{% include "wedge.svg" %}<span>{{ item.label }}</span></button>
+          {% else %}
+            <span class="sidebar-nav__parent-item">{{ item.label }}</span>
+          {% endif %}
+          </div>
+          <ul class="sidebar-nav__parent-list">
+            {% for item in item.items %}
+            <li class="sidebar-nav__item {% if item.label == page.active %}is-active{% endif %}">
+              {% if item.items %}
+              <div class="sidebar-nav__item-container">
+                <button type="button" class="sidebar-nav__item-trigger sidebar-nav__item-trigger--no-link" title="Open Menu">{% include "wedge.svg" %}<span>{{ item.label }}</span></button>
+              </div>
+              <ul class="sidebar-nav__child-list">
+                {% for item in item.items %}
+                <li class="sidebar-nav__child {% if item.label == page.name %}is-active {% endif %}">
+                  <a href="{{ item.url }}">{{ item.label }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+              {% else %}
+              <div class="sidebar-nav__item-container no-children">
+                <a {% if item.label == page.name %} class="is-active" {% endif %} href="{{ item.url }}">{{ item.label }}</a>
+              </div>
+              {% endif %}
+            </li>
+          {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li class="sidebar-nav__parent {% if item.label == page.active %}is-active{% endif %}">
+          <div class="sidebar-nav__parent-container no-children">
+            <a href="{{ item.url }}">{{ item.label }}</a>
+          </div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </ul>
+  </nav>
+</div>

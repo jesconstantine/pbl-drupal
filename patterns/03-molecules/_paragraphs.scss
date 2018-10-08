@@ -1,0 +1,79 @@
+// @copyright Copyright (c) 2018 Palantir.net
+.paragraph--center {
+  text-align: center;
+}
+
+.paragraph--right {
+  text-align: right;
+}
+
+.page-section--dark {
+  
+  .eyebrow {
+    color: #a3abb6;
+  }
+  
+  .card .eyebrow {
+    color: $blue-gray;
+  }
+}
+
+.paragraph-desc {
+  margin-bottom: rhythm(1);
+}
+
+.img-col-img {
+  @include make-col-ready();
+  @include make-col(12);
+  
+  @include breakpoint($bp3) {
+    @include make-col(7);
+    padding-right: rhythm(2);
+    
+    .img-w-text--right & {
+      padding-left: rhythm(2);
+      padding-right: 0;
+    }
+    
+    .landing--w-rail & {
+      @include make-col(12);
+    }
+  }
+  
+  @include breakpoint($bp4) {
+    .landing--w-rail & {
+      @include make-col(7);
+    }
+  }
+}
+
+.img-col-text {
+  @include make-col-ready();
+  @include make-col(12);
+  
+  @include breakpoint($bp3) {
+    @include make-col(12);
+    
+    .img-col-img + & {
+      @include make-col(5);
+    }
+    
+    .landing--w-rail & {
+      @include make-col(12);
+    }
+    
+    .landing--w-rail .img-col-img + & {
+      @include make-col(12);
+    }
+  }
+  
+  @include breakpoint($bp4) {
+    .landing--w-rail & {
+      @include make-col(12);
+    }
+    
+    .landing--w-rail .img-col-img + & {
+      @include make-col(5);
+    }
+  }
+}

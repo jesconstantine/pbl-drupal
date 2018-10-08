@@ -1,0 +1,47 @@
+<div class='product-feature {% if productFeature.alignment == 'right' %} product-feature--right{% endif %}'>
+  {% if productFeature.alignment == 'full-width'%}
+  <div class="row">
+    <div class="col">
+      {% block productFeatureFull %}
+      {# This is not part of the template, it is example 'product feature' code #}
+      <figure class="inline-video">
+        <div class="inline-video-container">
+          <iframe src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" title="my video title" allowfullscreen></iframe>
+        </div>
+      </figure>
+      {% endblock %}
+    </div>
+  </div>
+  {% else %}
+  <div class="row justify-content-between">
+    <div class="img-col-img">
+      {% block productFeature %}
+      {# This is not part of the template, it is example 'product feature' code #}
+      <figure class="inline-video">
+        <div class="inline-video-container">
+          <iframe src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" title="my video title" allowfullscreen></iframe>
+        </div>
+      </figure>
+      {% endblock %}
+    </div>
+    <div class="img-col-text">
+      {% if productFeature.eyebrow %}
+      {% set eyebrow = productFeature.eyebrow %}
+      {% include "eyebrow.twig" %}
+      {% endif %}
+      {% set text = productFeature.title %}
+      {% include "h3.twig" %}
+      {% if productFeature.desc %}
+      <div class="paragraph-desc inline">
+        {{productFeature.desc}}
+      </div>
+      {% endif %}
+      {% if productFeature.cta.title %}
+        {% set url = productFeature.cta.url %}
+        {% set label = productFeature.cta.title %}
+        {% include "button-link.twig" %}
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "terms" : [
+        "Dog", 
+        "Cat",
+        "Rabbit",
+        "Ferret"
+      ],
+      "descriptions": [
+        "Pets with Fur"
+      ] 
+    },
+    {
+      "terms" : [
+        "Lizard", 
+        "Fish"
+      ],
+      "descriptions": [
+        "Pets without Fur",
+        "Pets that live in a contained space."
+      ] 
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+// imporant tags can be removed when we move this into drupal
+.prism-wrapper {
+  margin: $space-half 0 !important;
+  padding: rhythm(.5) rhythm(1);
+  border-radius: 5px;
+  background: $gray-lt !important;
+}

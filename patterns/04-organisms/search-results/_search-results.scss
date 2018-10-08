@@ -1,0 +1,101 @@
+// @copyright Copyright (c) 2018 Palantir.net
+.st-ui-injected-on-page-container {
+  font-family: $avenir !important;
+}
+
+.st-search-container {
+  margin: rhythm(2) 0;
+  
+  .st-query-present {
+    // This is unnecessary for drupal and could be removed.
+    display: block !important;
+  }
+  
+  .st-search-summary {
+    @include adjust-font-size-to($label, 1);
+    font-style: italic;
+    display: block;
+    border-bottom: 1px solid $gray-lt;
+    color: $blue-gray !important;
+    padding-bottom: rhythm(.25);
+  }
+  
+  a.st-ui-result,
+  .st-ui-result {
+    padding: rhythm(2) 0;
+    border-color: $gray-lt;
+    
+    &:before {
+      display: none;
+    }
+    
+    &:link,
+    &:visited {
+      color: $blue-gray !important;  
+    }
+    
+    em {
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+    
+    .st-ui-type-heading {
+      @include adjust-font-size-to($md-heading, 1.25);
+      color: $gray-dk !important;
+    }
+    
+    .st-ui-type-detail {
+      @include adjust-font-size-to($text, 1.1);
+      color: $blue-gray !important;
+      max-height: none !important;
+    }
+    
+    &:active,
+    &:hover,
+    &:focus {
+      .st-ui-type-heading {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .st-ui-footer {
+    margin: rhythm(2) 0;
+  }
+  
+  .st-ui-pagination { 
+    
+    > .st-query-present {
+      margin: 0 auto;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    a.st-ui-pagination-link,
+    .st-ui-pagination-link,
+    .st-result-pagination-link {
+      margin: 0 rhythm(.1);
+      display: block;
+      padding: rhythm(.2) rhythm(.5);
+      color: $gray-dk !important;
+      text-decoration: none !important;
+      
+      &:active,
+      &:hover,
+      &:focus {
+        color: $orange !important;
+        
+        span.st-ui-arrow {
+          border-color: $orange !important;
+        }
+      }
+      
+      &.active {
+        color: $white !important;
+        background-color: $orange;
+        border-radius: 20px;
+      } 
+    }
+  }
+}

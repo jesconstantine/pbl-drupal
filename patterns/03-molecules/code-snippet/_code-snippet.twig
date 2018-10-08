@@ -1,0 +1,8 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<pre class="prism-wrapper">
+  <code class="{% if code.language %}language-{{code.language}}{% else %}language-undefined{% endif %}">
+    {% block codeSnippet %}{% endblock %}
+  </code>
+</pre>
+

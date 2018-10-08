@@ -1,0 +1,64 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<footer class="site-footer">
+  <nav class="site-footer__nav">
+    <div class="container">
+      <div class="row">
+        {% for item in footer_items %}
+        <div class="col-sm col-xl-3">
+          <h2 class="site-footer__nav-header">{{ item.label }}</h2>
+          <ul>
+            {% for item in item.child_group %}
+            <li><a href="{{item.url}}">{{ item.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+
+        <div class="col-md col-xl-4 col-xxl-3">
+          <h2 class="site-footer__nav-header">Stay in Touch</h2>
+          <ul class="site-footer__social-media">
+            <li>
+              <a href="https://www.facebook.com/AkamaiTechnologies">
+                <span class="element-invisible">Visit Our Facebook Page</span>
+                {% include 'facebook.twig' %}
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Akamai">
+                <span class="element-invisible">Visit Our Twitter Account</span>
+                {% include 'twitter.twig' %}
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/akamai-technologies/">
+                <span class="element-invisible">Visit Our LinkedIn Account</span>
+                {% include 'linkedin.twig' %}
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/akamaitechnologies">
+                <span class="element-invisible">Visit Our Youtube Page</span>
+                {% include 'youtube.twig' %}
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/akamai">
+                <span class="element-invisible">Visit Us On Github</span>
+                {% include 'github.twig' %}
+              </a>
+            </li>
+          </ul>
+
+          {% set label = footerCTA.label %}
+          {% set type = footerCTA.type %}
+          {% set url = footerCTA.url %}
+          {% include "button-link.twig" %}
+        </div>
+        <div class="col-md-12 col-lg-12 col-xxl-2">
+          {% include "google-translate.twig" %}
+        </div>
+      </div>
+    </div>
+  </nav>
+</footer>

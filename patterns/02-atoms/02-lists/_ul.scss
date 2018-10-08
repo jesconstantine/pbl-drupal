@@ -1,0 +1,12 @@
+ul {
+  padding-left: 1em;
+  
+  li {
+    margin-bottom: rhythm(.25);
+  }
+  
+  li ul,
+  li ol {
+    margin-top: rhythm(.25);
+  } 
+}

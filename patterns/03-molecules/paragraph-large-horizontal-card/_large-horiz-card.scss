@@ -1,0 +1,144 @@
+// @copyright Copyright (c) 2018 Palantir.net
+
+.large-horiz-card {
+  clear: both;
+  margin: rhythm(1.5) 0;
+  
+  .button {
+    margin-top: rhythm(2);
+  }
+  
+  > a {
+    display: block;
+  }
+  
+  a {
+    
+    &:link,
+    &:visited {
+      color: $blue-gray;
+      text-decoration: none;
+    }
+    
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $blue-gray;
+    }
+  }
+}
+
+.large-horiz-card__block {
+  background-color: $white;
+  box-shadow: 0 0 25px rgba($black, .1);
+  padding: rhythm(2) rhythm(1.5);
+  
+  &.card--border-top {
+    border-top: 8px solid $blue-gray-dk;
+  }
+  
+  &.card--border-bottom {
+    border-bottom: 8px solid $blue-gray-dk;
+  }
+  
+  .card--reversed & {
+    color: $white;
+    
+    .button--secondary {
+      color: $white;
+      border-color: $white;
+    }
+    
+    .button--tertiary {
+      color: $white;
+      
+      &::after {
+        background-image: url('../imgs/production/chevron-small-right-white.svg');
+      }
+    }
+  }
+  
+  a:link &,
+  a:visited & {
+    transform: perspective(100px) translateZ(0px);
+    transition: all .5s ease;
+  }
+  
+  a:active &,
+  a:hover &,
+  a:focus & {
+    transform: perspective(100px) translateZ(2px);
+    box-shadow: 0 0 25px rgba($black, .25);
+    transition: all .5s ease;
+    
+    .button--tertiary {
+      text-decoration: underline;
+    }
+
+    .button--secondary {
+      background-color: $blue-gray;
+      border-color: $blue-gray;
+      color: $white;
+      
+      .card--reversed & {
+        background-color: $white;
+        border-color: $white;
+        color: $blue-gray;
+      }
+    }
+  }
+  
+  .icon-circle {
+    margin-bottom: rhythm(.5);
+    
+    svg {
+      fill: $white;
+    }
+  }
+  
+  @include breakpoint($bp2) {
+    display: flex;
+    padding: rhythm(2) rhythm(2.5);
+    
+    .icon-circle {
+      margin: 0 rhythm(1) 0 0;
+    }
+  }
+  
+  @include breakpoint($bp4) {
+    padding: rhythm(2) rhythm(2);
+  }
+}
+
+.large-horiz-card__title {
+  margin-top: rhythm(.25);
+  margin-bottom: 0;
+  
+  .card--reversed & {
+    color: $white;
+  }
+}
+
+.large-horiz-card__desc {
+  margin-top: rhythm(.35);
+  
+  .card--reversed & {
+    a:link,
+    a:visited {
+      color: $white;
+      text-decoration: underline;
+    }
+    
+    a:active,
+    a:hover,
+    a:focus {
+      color: $white;
+      text-decoration: underline;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: $white;
+    }
+  }
+}

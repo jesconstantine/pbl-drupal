@@ -1,0 +1,16 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+{% extends '_code-snippet.twig' %}
+
+{% block codeSnippet %}
+
+  # Install Akamai Purge: akamai install purge
+  $ akamai purge https://bc.akamaiapibootcamp.com/index.html
+  Purging...... [OK] (URLs: 1, ETA: 5 seconds)
+
+  # Pipe URLs into akamai purge
+  $ cat url-list.txt | akamai purge
+  Purging...... [OK] (URLs: 500, ETA: 5 seconds)
+
+{% endblock %}
+

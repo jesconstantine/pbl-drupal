@@ -1,0 +1,13 @@
+{
+  "resource": {
+    "type": "externalLink",
+    "url": "https://developer.akamai.com/",
+    "id": "resource-1",
+    "title": "Hands-on Lab (external link)",
+    "desc": "The hands-on labs were one of the most popular features of the Developer Zone, so we've made the lab and materials available here.",
+    "cta": "Learn More",
+    "img": {
+      "src": "/assets/imgs/production/teaser-img.png"
+    }
+  }
+}

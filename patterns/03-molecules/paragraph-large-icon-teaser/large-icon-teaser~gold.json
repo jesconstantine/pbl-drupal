@@ -1,0 +1,13 @@
+{
+  "largeIconTeaser": {
+    "color": "gold",
+    "title": "Fast Metadata Interaction",
+    "desc": "With Fast Activation, you can publish property configuration changes from the Property Manager UI and API (PAPI) to the Akamai Production Network in approximately 15 minutes or to the Akamai Staging Network in approximately 3 minutes.",
+    "secondary_link": {
+      "url": "#",
+      "title": "Learn More"
+    },
+    "primary_link": null,
+    "tertiary_link": null
+  }
+}

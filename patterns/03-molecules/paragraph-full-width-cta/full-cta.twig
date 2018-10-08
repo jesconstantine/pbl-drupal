@@ -1,0 +1,18 @@
+<div class='full-cta {% if fullCta.alignment == 'center' %} paragraph--center{% endif %}{% if fullCta.alignment == 'right' %} paragraph--right{% endif %}'>
+  {% if fullCta.eyebrow %}
+  {% set eyebrow = fullCta.eyebrow %}
+  {% include "eyebrow.twig" %}
+  {% endif %}
+  {% set text = fullCta.title %}
+  {% include "h2.twig" %}
+  {% if fullCta.desc %}
+  <div class="paragraph-desc inline">
+    {{fullCta.desc}}
+  </div>
+  {% endif %}
+  {% if fullCta.cta.title %}
+    {% set url = fullCta.cta.url %}
+    {% set label = fullCta.cta.title %}
+    {% include "button-link.twig" %}
+  {% endif %}
+</div>

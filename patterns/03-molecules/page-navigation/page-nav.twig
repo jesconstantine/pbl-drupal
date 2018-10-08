@@ -1,0 +1,21 @@
+{# @copyright Copyright (c) 2018 Palantir.net #}
+
+<div class="page-nav--wrapper">
+  <button type="button" id="page-nav--trigger" class="page-nav--trigger">
+    On this page {% include "wedge.svg" %}
+  </button>
+  <nav id="page-nav" class="page-nav">
+    {% for item in page_items %}
+    <h2 class="page-nav__title">{{item.label}}</h2>
+    <ul class="page-nav__list">
+      {% for item in item.child_groups %}
+        <li class="page-nav__item">
+          <div class="page-nav__item-container">
+            <a href="{{ item.url }}">{{ item.label }}</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </nav>
+</div>
