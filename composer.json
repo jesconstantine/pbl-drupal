@@ -1,7 +1,7 @@
 {
 	"name":             "styleguide/assets",
 	"description":      "Compiled static assets and pattern twig from a styleguide for use in a Drupal 8 theme.",
-	"type":             "project",
+	"type":             "styleguide-assets",
 	"require": {
 		"composer/installers": "~1.0"
 	}
